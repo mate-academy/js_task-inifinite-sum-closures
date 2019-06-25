@@ -21,8 +21,3 @@ test('Should return 0 for empty chain', () => {
   expect(sum())
     .toBe(0);
 });
-
-test('Should return undefined if chain is not finished', () => {
-  expect(sum(1))
-    .toBe(undefined);
-});
