@@ -15,7 +15,18 @@
  * @return {function}
  */
 function sum(a) {
-  // write code here
+  let summary = a;
+  if (summary === undefined) {
+    return 0;
+  }
+  const summaryFunction = function(b) {
+    if (b) {
+      summary += b;
+      return summaryFunction;
+    }
+    return summary;
+  };
+  return summaryFunction;
 }
 
 module.exports = sum;
