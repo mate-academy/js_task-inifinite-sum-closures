@@ -15,7 +15,19 @@
  * @return {function}
  */
 function sum(a) {
-  // write code here
+  let result = 0;
+  if (a === undefined) {
+    return result;
+  } else {
+    result = a;
+  }
+  return function func(b) {
+    if (b !== undefined) {
+      result += b;
+      return func;
+    }
+    return result;
+  };
 }
 
 module.exports = sum;
