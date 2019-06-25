@@ -21,14 +21,13 @@ function sum(a) {
   } else {
     result = a;
   }
-  const func = (b) => {
+  return function func(b) {
     if (b !== undefined) {
       result += b;
       return func;
     }
     return result;
   };
-  return func;
 }
 
 module.exports = sum;
