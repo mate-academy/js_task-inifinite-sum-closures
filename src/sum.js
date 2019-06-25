@@ -14,8 +14,22 @@
  *
  * @return {function}
  */
-function sum(a) {
-  // write code here
-}
+const sum = (...args) => {
+  let accum = args.reduce((acc, a) => acc + a, 0);
+
+  if (args.length < 1) {
+    return 0;
+  }
+
+  return function adding(...argsExtra) {
+    if (argsExtra.length < 1) {
+      return accum;
+    }
+
+    accum += argsExtra.reduce((acc, b) => acc + b, 0);
+
+    return adding;
+  };
+};
 
 module.exports = sum;
