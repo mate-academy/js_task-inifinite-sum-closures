@@ -21,3 +21,10 @@ test('Should return 0 for empty chain', () => {
   expect(sum())
     .toBe(0);
 });
+
+// testing extended functionality
+
+test('Should work with any number of params', () => {
+  expect(sum(0, 1, 2)(3, 4)(10)())
+    .toBe(20);
+});
