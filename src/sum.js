@@ -1,21 +1,20 @@
 'use strict';
 
-/**
- * Implement sum function:
+/***
+ * Implement `sum` function that can be used the next way:
  *
- * Function takes 2 numbers and returns it's sum
+ * sum(1)() === 1
+ * sum(2)(3)() === 13
+ * sum(1)(1)(1)(1)(1)(1)(1)(1)() === 8
  *
- * sum(1, 2) === 3
- * sum(1, 11) === 12
+ * At lease 1 argument is passed. Every chain is finished with empty parens ()
  *
  * @param {number} a
- * @param {number} b
  *
- * @return {number}
+ * @return {function}
  */
-function sum(a, b) {
+function sum() {
   // write code here
-  return a + b;
 }
 
 module.exports = sum;
