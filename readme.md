@@ -1,4 +1,4 @@
-# Boilerplate for JS tasks
+# Infinite sum
 
 **Read the guideline before start**
 

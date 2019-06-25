@@ -1,7 +1,7 @@
 {
-  "name": "js-task-boilerplate",
+  "name": "js-task-infinite-sum",
   "version": "1.0.0",
-  "description": "js task boilerplate",
+  "description": "js task for closures practice",
   "main": "src/sum.js",
   "scripts": {
     "test": "jest",
