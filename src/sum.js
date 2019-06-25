@@ -14,8 +14,16 @@
  *
  * @return {function}
  */
-function sum(a) {
-  // write code here
-}
+const sum = (...base) => {
+  const result = base.length
+    ? base.reduce((acc, cur) => acc + cur)
+    : 0;
+
+  return !base.length ? result : (...extra) => {
+    return extra.length
+      ? sum(result, ...extra)
+      : result;
+  };
+};
 
 module.exports = sum;
