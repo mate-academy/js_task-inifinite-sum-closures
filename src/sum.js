@@ -15,7 +15,18 @@
  * @return {function}
  */
 function sum(a) {
-  // write code here
+  let summ = 0;
+  let infinity;
+
+  if (!a) { return summ; }
+  summ += a;
+
+  return infinity = (param) => {
+    if (!param) { return summ; }
+
+    summ += param;
+    return infinity;
+  };
 }
 
 module.exports = sum;
