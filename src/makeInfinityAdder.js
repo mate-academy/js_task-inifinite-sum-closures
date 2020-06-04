@@ -14,33 +14,7 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  return (a) => {
-    let sum = a || 0;
-
-    if (a === undefined) {
-      const value = sum;
-
-      sum = 0;
-
-      return value;
-    }
-
-    const adder = (b) => {
-      if (b === undefined) {
-        const value = sum;
-
-        sum = 0;
-
-        return value;
-      }
-
-      sum += b;
-
-      return adder;
-    };
-
-    return adder;
-  };
+  // write code here
 }
 
 module.exports = makeInfinityAdder;
