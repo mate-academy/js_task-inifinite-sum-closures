@@ -12,6 +12,7 @@ function makeInfinityAdder() {
   return function add(value) {
     if (value === undefined) {
       const result = amount;
+      
       amount = 0;
 
       return result;
