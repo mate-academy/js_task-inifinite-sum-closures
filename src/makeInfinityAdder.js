@@ -9,7 +9,7 @@ function makeInfinityAdder() {
   let sum = 0;
 
   const adder = function(num) {
-    if (num) {
+    if (num !== undefined) {
       sum += num;
 
       return adder;
