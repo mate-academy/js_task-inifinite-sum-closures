@@ -9,9 +9,9 @@ function makeInfinityAdder(x = 0) {
   const innerAddler = function(y) { // Long solution
     if (y) {
       return makeInfinityAdder(x + y);
-    } else {
-      return x;
     }
+
+    return x;
   };
 
   return innerAddler;
