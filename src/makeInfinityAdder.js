@@ -4,22 +4,16 @@
  *
  * @return {function}
  */
-let sum = 0;
-
-function makeInfinityAdder() {
-  return (number) => {
+function makeInfinityAdder(sum = 0) {
+  function adder(number) {
     if (number) {
-      sum += number;
-
-      return makeInfinityAdder();
-    } else {
-      const result = sum;
-
-      sum = 0;
-
-      return result;
+      return makeInfinityAdder(sum + number);
     }
-  };
+
+    return sum;
+  }
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
