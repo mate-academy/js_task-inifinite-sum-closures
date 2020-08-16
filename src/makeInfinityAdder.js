@@ -4,9 +4,16 @@
  *
  * @return {function}
  */
+function makeInfinityAdder(sum = 0) {
+  function adder(number) {
+    if (number) {
+      return makeInfinityAdder(sum + number);
+    }
 
-function makeInfinityAdder() {
-  // write code here
+    return sum;
+  }
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
