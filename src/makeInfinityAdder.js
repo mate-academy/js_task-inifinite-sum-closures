@@ -12,9 +12,7 @@ function makeInfinityAdder() {
       sum += number;
 
       return infinityAdder;
-    }
-
-    if (!number) {
+    } else {
       const finalSum = sum;
 
       sum = 0;
