@@ -14,11 +14,11 @@ function makeInfinityAdder() {
 
       return adder;
     } else {
-      const localSum = sum;
+      const currentSum = sum;
 
       sum = 0;
 
-      return localSum;
+      return currentSum;
     }
   };
 
