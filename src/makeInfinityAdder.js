@@ -7,19 +7,19 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let actualSum = 0;
 
   const getSum = (number) => {
-    if (!number) {
-      actualSum = sum;
-      sum = 0;
+    if (number !== undefined) {
+      sum += number;
 
-      return actualSum;
+      return getSum;
     }
 
-    sum += number;
+    const actualSum = sum;
 
-    return getSum;
+    sum = 0;
+
+    return actualSum;
   };
 
   return getSum;
