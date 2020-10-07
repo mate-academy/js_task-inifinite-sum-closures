@@ -23,6 +23,4 @@ function makeInfinityAdder() {
   };
 }
 
-makeInfinityAdder()();
-
 module.exports = makeInfinityAdder;
