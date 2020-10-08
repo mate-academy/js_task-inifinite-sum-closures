@@ -11,7 +11,7 @@ function makeInfinityAdder() {
   return function sumsumsum(number) {
     const tempSum = sum;
 
-    if (number === undefined || number === 0) {
+    if (number === undefined) {
       sum = 0;
 
       return tempSum;
