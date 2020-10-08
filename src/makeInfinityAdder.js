@@ -8,10 +8,10 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  return function sumsumsum(number = 0) {
+  return function sumsumsum(number) {
     const tempSum = sum;
 
-    if (!number) {
+    if (number === undefined || number === 0) {
       sum = 0;
 
       return tempSum;
