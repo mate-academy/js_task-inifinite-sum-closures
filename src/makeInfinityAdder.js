@@ -8,32 +8,19 @@
 function makeInfinityAdder() {
   let sum = 0;
   let temp;
-  const adder = (param1) => {
-    if (param1 !== undefined) {
-      sum += param1;
+  const adderFunc = (...args) => {
+    if (args.length === 0) {
+      temp = sum;
+      sum = 0;
 
-      const helper = (param2) => {
-        if (param2 === undefined) {
-          temp = sum;
-          sum = 0;
-
-          return temp;
-        }
-        sum += param2;
-
-        return helper;
-      };
-
-      return helper;
+      return temp;
     }
+    sum += args[0];
 
-    temp = sum;
-    sum = 0;
-
-    return temp;
+    return adderFunc;
   };
 
-  return adder;
+  return adderFunc;
 }
 
 module.exports = makeInfinityAdder;
