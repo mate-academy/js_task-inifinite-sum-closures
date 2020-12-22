@@ -19,9 +19,7 @@ function makeInfinityAdder() {
 
     totalSum += number;
 
-    return function(nextNumber) {
-      return adder(nextNumber);
-    };
+    return adder;
   };
 
   return adder;
