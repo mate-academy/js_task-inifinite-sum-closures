@@ -6,12 +6,10 @@
  */
 
 function makeInfinityAdder() {
-  let result;
   let sumOfNum = 0;
-
   const add = (num) => {
     if (num === undefined) {
-      result = sumOfNum;
+      const result = sumOfNum;
 
       sumOfNum = 0;
 
