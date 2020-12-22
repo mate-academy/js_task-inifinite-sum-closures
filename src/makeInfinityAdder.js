@@ -8,25 +8,18 @@
 function makeInfinityAdder() {
   const numbers = [];
 
-  return (numberN) => {
-    if (!numberN) {
-      return numbers.length;
+  return function InputOperator(number) {
+    if (number) {
+      numbers.push(number);
+
+      return InputOperator;
+    } else {
+      const accomulatedNumbers = [...numbers];
+
+      numbers.length = 0;
+
+      return accomulatedNumbers.reduce((acc, curV) => acc + curV, 0);
     }
-    numbers.push(numberN);
-
-    return function lastInputOperator(numberNplus1) {
-      if (numberNplus1) {
-        numbers.push(numberNplus1);
-
-        return lastInputOperator;
-      } else {
-        const accomulatedNumbers = [...numbers];
-
-        numbers.length = 0;
-
-        return accomulatedNumbers.reduce((acc, curV) => acc + curV, 0);
-      }
-    };
   };
 }
 
