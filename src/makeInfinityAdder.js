@@ -6,19 +6,19 @@
  */
 
 function makeInfinityAdder() {
-  const numbers = [];
+  let sum = 0;
 
   return function InputOperator(number) {
     if (number) {
-      numbers.push(number);
+      sum += number;
 
       return InputOperator;
     } else {
-      const accomulatedNumbers = [...numbers];
+      const resultSum = sum;
 
-      numbers.length = 0;
+      sum = 0;
 
-      return accomulatedNumbers.reduce((acc, curV) => acc + curV, 0);
+      return resultSum;
     }
   };
 }
