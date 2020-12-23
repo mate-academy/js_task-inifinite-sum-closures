@@ -7,19 +7,14 @@
 
 function makeInfinityAdder() {
   let overAllsum = 0;
-  let counter = 0;
   const caller = (x) => {
-    if (counter === 0) {
-      overAllsum = 0;
-    }
-
     if (x === undefined) {
-      counter = 0;
+      const returner = overAllsum;
 
-      return overAllsum;
+      overAllsum = 0;
+
+      return returner;
     }
-
-    counter++;
     overAllsum += x;
 
     return caller;
