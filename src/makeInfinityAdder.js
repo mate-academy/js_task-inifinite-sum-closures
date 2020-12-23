@@ -7,19 +7,14 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let doReset = 0;
 
   const nextAction = (num) => {
-    if (!num && doReset === 0) {
-      doReset++;
+    if (!num) {
+      const result = sum;
 
-      return sum;
-    }
-
-    if (doReset > 0) {
       sum = 0;
 
-      return sum;
+      return result;
     }
 
     sum += num;
