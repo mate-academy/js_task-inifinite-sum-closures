@@ -6,21 +6,17 @@
  */
 
 function makeInfinityAdder() {
-  return function(a) {
-    let result = a;
+  let result = 0;
 
+  return function f(b) {
     if (arguments.length === 0) {
-      return 0;
-    }
+      const newRes = result;
 
-    function f(b) {
-      if (arguments.length === 0) {
-        return result;
-      }
-      result += b;
+      result = 0;
 
-      return f;
+      return newRes;
     }
+    result += b;
 
     return f;
   };
