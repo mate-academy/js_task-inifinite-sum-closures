@@ -21,10 +21,6 @@ function makeInfinityAdder() {
     return f;
   }
 
-  f.toString = function() {
-    return currentSum;
-  };
-
   return f;
 }
 
