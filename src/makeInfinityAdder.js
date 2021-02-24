@@ -1,12 +1,21 @@
 'use strict';
 
-/***
- *
- * @return {function}
- */
-
 function makeInfinityAdder() {
-  // write code here
+  let numbersSum = 0;
+
+  return function nextStep(number) {
+    if (!number) {
+      const savedSum = numbersSum;
+
+      numbersSum = 0;
+
+      return savedSum;
+    }
+
+    numbersSum += number;
+
+    return nextStep;
+  };
 }
 
 module.exports = makeInfinityAdder;
