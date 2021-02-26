@@ -16,12 +16,10 @@ function makeInfinityAdder() {
       return getSum;
     }
 
-    if (arguments.length === 0 && lastArgument === undefined) {
-      return 0;
-    }
-    lastArgument = num;
+    lastArgument = store;
+    store = 0;
 
-    return store;
+    return lastArgument;
   };
 }
 
