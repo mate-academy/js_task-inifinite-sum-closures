@@ -5,12 +5,12 @@
  * @return {function}
  */
 
-function makeInfinityAdder(firstValue = 0) {
-  let sumOfOperations = firstValue;
+function makeInfinityAdder() {
+  let sumOfOperations = 0;
 
-  return function adder(lastValue) {
-    if (lastValue) {
-      sumOfOperations += lastValue;
+  return function adder(number) {
+    if (number) {
+      sumOfOperations += number;
 
       return adder;
     }
