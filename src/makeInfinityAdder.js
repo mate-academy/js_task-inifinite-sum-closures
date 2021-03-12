@@ -14,7 +14,7 @@ function makeInfinityAdder() {
     let sum = x;
 
     return function result(y) {
-      if (arguments.length > 0) {
+      if (y !== undefined) {
         sum += y;
 
         return result;
