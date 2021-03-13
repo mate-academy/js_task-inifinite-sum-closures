@@ -16,8 +16,6 @@ function makeInfinityAdder() {
 
       return result;
     }
-
-    sum += item;
   };
 
   return (a) => {
