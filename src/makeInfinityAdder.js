@@ -6,27 +6,23 @@
  */
 
 function makeInfinityAdder() {
-  const summarize = (prevValue) => {
-    let wholeSum = prevValue;
+  let wholeSum = 0;
 
-    if (prevValue) {
-      const nextSum = (nextValue) => {
-        if (nextValue) {
-          wholeSum += nextValue;
-
-          return nextSum;
-        } else {
-          return wholeSum;
-        }
-      };
+  const nextSum = (nextValue) => {
+    if (nextValue) {
+      wholeSum += nextValue;
 
       return nextSum;
     } else {
-      return 0;
+      const result = wholeSum;
+
+      wholeSum = 0;
+
+      return result;
     }
   };
 
-  return summarize;
+  return nextSum;
 }
 
 module.exports = makeInfinityAdder;
