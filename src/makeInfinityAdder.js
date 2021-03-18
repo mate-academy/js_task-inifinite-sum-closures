@@ -13,13 +13,13 @@ function makeInfinityAdder() {
       sum += argument;
 
       return adding;
-    } else {
-      const returnValue = sum;
-
-      sum = 0;
-
-      return returnValue;
     }
+
+    const returnValue = sum;
+
+    sum = 0;
+
+    return returnValue;
   };
 
   return adding;
