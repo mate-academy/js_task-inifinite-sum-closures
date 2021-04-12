@@ -7,22 +7,19 @@
 
 function makeInfinityAdder() {
   let currentSum = 0;
-  let count = 0;
+  let result = 0;
 
-  return function getCalculater(number) {
+  return function getCalculator(number) {
     if (number !== undefined) {
       currentSum += number;
 
-      return getCalculater;
+      return getCalculator;
     }
 
-    if (count > 0) {
-      currentSum = 0;
-    }
+    result = currentSum;
+    currentSum = 0;
 
-    count++;
-
-    return currentSum;
+    return result;
   };
 }
 
