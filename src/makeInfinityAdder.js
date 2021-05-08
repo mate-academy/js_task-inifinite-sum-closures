@@ -9,14 +9,14 @@ function makeInfinityAdder() {
   let counter = 0;
 
   return function adder(number) {
-    const countercCopy = counter;
+    const counterCopy = counter;
 
     if (number) {
       counter += number;
     } else {
       counter = 0;
 
-      return countercCopy;
+      return counterCopy;
     };
 
     return adder;
