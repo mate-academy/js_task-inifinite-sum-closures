@@ -8,9 +8,7 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const adder = function(num = 0) {
-    sum += num;
-
+  const adder = function(num) {
     if (!num) {
       const sumCopy = sum;
 
@@ -18,6 +16,8 @@ function makeInfinityAdder() {
 
       return sumCopy;
     }
+
+    sum += num;
 
     return adder;
   };
