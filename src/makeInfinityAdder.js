@@ -9,7 +9,7 @@ function makeInfinityAdder() {
   const adder = [];
 
   const getAdder = (atribute) => {
-    if (atribute === undefined) {
+    if (!atribute) {
       const sumOfAdder
         = adder.reduce((accumulator, current) => accumulator + current, 0);
 
