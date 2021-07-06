@@ -24,20 +24,4 @@ function makeInfinityAdder() {
   return adder;
 }
 
-// function makeInfinityAdder() {
-//   const adder = (functions) => {
-//     let sum = 0;
-
-//     for (const f of functions) {
-//       return f() {
-
-//       }
-//     }
-
-//     return sum;
-//   };
-
-//   return adder;
-// }
-
 module.exports = makeInfinityAdder;
