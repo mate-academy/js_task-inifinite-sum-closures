@@ -10,15 +10,15 @@ function makeInfinityAdder() {
   let amount = 0;
 
   function adder(number) {
-    if (number) {
-      amount += number;
-    } else {
+    if (arguments.length < 1) {
       const total = amount;
 
       amount = 0;
 
       return total;
     }
+
+    amount += number;
 
     return adder;
   }
