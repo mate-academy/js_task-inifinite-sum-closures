@@ -9,7 +9,7 @@ function makeInfinityAdder() {
   let allNumbersSum = 0;
 
   return function hellAccountants(number) {
-    if (number >= 0) {
+    if (number !== undefined) {
       allNumbersSum += number;
 
       return hellAccountants;
