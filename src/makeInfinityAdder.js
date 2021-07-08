@@ -8,17 +8,17 @@
 function makeInfinityAdder() {
   let result = 0;
 
-  return function f(first) {
-    if (first === undefined) {
+  return function add(number) {
+    if (number === undefined) {
       const preResult = result;
 
       result = 0;
 
       return preResult;
     }
-    result += +first;
+    result += +number;
 
-    return f;
+    return add;
   };
 }
 
