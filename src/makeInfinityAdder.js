@@ -8,29 +8,27 @@
 function makeInfinityAdder() {
   // write code here
   let sumNumbers = 0;
-  let counter = 0;
+  let emptyCall = 0;
 
   const getSumNumbers = (currentNumber) => {
     if (currentNumber === undefined) {
-      counter++;
+      emptyCall++;
     }
 
-    if (counter === 2) {
+    if (emptyCall >= 2) {
       sumNumbers = 0;
 
       return sumNumbers;
-    } else if (counter === 1) {
+    } else if (emptyCall === 1) {
       return sumNumbers;
     }
 
     sumNumbers += currentNumber;
 
-    return (nextNumber) => {
-      return getSumNumbers(nextNumber);
-    };
+    return getSumNumbers;
   };
 
   return getSumNumbers;
-}
+};
 
 module.exports = makeInfinityAdder;
