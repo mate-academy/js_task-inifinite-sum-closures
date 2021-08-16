@@ -8,19 +8,14 @@
 function makeInfinityAdder() {
   // write code here
   let sumNumbers = 0;
-  let emptyCall = 0;
 
   const getSumNumbers = (currentNumber) => {
     if (currentNumber === undefined) {
-      emptyCall++;
-    }
+      const result = sumNumbers;
 
-    if (emptyCall >= 2) {
       sumNumbers = 0;
 
-      return sumNumbers;
-    } else if (emptyCall === 1) {
-      return sumNumbers;
+      return result;
     }
 
     sumNumbers += currentNumber;
