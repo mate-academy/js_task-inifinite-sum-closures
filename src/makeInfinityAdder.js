@@ -6,32 +6,20 @@
  */
 
 function makeInfinityAdder() {
+  let amount = 0;
+
   const adder = (x) => {
-    let amount = x;
-    let buffer = amount;
+    if (x !== undefined) {
+      amount += x;
 
-    if (x === undefined) {
-      return 0;
+      return adder;
+    } else {
+      const buffer = amount;
+
+      amount = 0;
+
+      return buffer;
     }
-
-    function sum(y) {
-      if (y === undefined) {
-        amount = 0;
-
-        return buffer;
-      }
-
-      amount += y;
-      buffer = amount;
-
-      return sum;
-    };
-
-    sum[Symbol.toPrimitive] = (hint) => {
-      return amount;
-    };
-
-    return sum;
   };
 
   return adder;
