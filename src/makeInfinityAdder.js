@@ -27,7 +27,7 @@ function makeInfinityAdder() {
       return sum;
     };
 
-    sum.toString = function() {
+    sum[Symbol.toPrimitive] = (hint) => {
       return amount;
     };
 
