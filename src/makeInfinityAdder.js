@@ -8,7 +8,7 @@
 function makeInfinityAdder() {
   let sumOfNumber = 0;
   const adder = (number) => {
-    if (!number) {
+    if (number === undefined) {
       const result = sumOfNumber;
 
       sumOfNumber = 0;
