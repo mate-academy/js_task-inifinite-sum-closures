@@ -8,11 +8,11 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const qwe = (value) => {
+  const calc = (value) => {
     if (value) {
       sum += value;
 
-      return qwe;
+      return calc;
     };
 
     const lastSum = sum;
@@ -22,7 +22,7 @@ function makeInfinityAdder() {
     return lastSum;
   };
 
-  return qwe;
+  return calc;
 }
 
 module.exports = makeInfinityAdder;
