@@ -9,7 +9,7 @@ function makeInfinityAdder() {
   let sum = 0;
 
   function makeAdder(nextArg) {
-    if (nextArg === undefined) {
+    if (!nextArg) {
       const sumClone = sum;
 
       sum = 0;
