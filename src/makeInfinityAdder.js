@@ -10,11 +10,11 @@ function makeInfinityAdder() {
 
   function adder(x) {
     if (!x) {
-      const ret = totalSum;
+      const lastSum = totalSum;
 
       totalSum = 0;
 
-      return ret;
+      return lastSum;
     };
 
     totalSum += x;
