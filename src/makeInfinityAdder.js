@@ -8,33 +8,23 @@
 function makeInfinityAdder() {
   // write code here
   let calculateSum = 0;
-  let printSum = 0;
 
-  function outerSum(num1) {
-    if (arguments.length === 0) {
+  function adder(num) {
+    let printSum = 0;
+
+    if (!num) {
       printSum = calculateSum;
       calculateSum = 0;
 
       return printSum;
     }
 
-    calculateSum += num1;
+    calculateSum += num;
 
-    return function innerSum(num2) {
-      if (arguments.length > 0) {
-        calculateSum += num2;
-
-        return innerSum;
-      } else {
-        printSum = calculateSum;
-        calculateSum = 0;
-
-        return printSum;
-      }
-    };
+    return adder;
   }
 
-  return outerSum;
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
