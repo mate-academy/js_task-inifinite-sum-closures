@@ -6,6 +6,7 @@
  */
 
 function makeInfinityAdder() {
+  // write code here
   let calculateSum = 0;
   let printSum = 0;
 
@@ -34,7 +35,6 @@ function makeInfinityAdder() {
   }
 
   return outerSum;
-  // write code here
 }
 
 module.exports = makeInfinityAdder;
