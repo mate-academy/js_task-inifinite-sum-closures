@@ -3,15 +3,15 @@
 function makeAdder() {
   let sum = 0;
 
-  const adder = (x) => {
-    if (x === undefined) {
+  const adder = (num) => {
+    if (num === undefined) {
       const result = sum;
 
       sum = 0;
 
       return result;
     } else {
-      sum += x;
+      sum += num;
 
       return adder;
     }
