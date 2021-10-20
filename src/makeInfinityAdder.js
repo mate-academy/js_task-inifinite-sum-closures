@@ -1,12 +1,23 @@
 'use strict';
 
-/***
- *
- * @return {function}
- */
+function makeAdder() {
+  let sum = 0;
 
-function makeInfinityAdder() {
-  // write code here
+  const lala = (x) => {
+    if (x === undefined) {
+      const result = sum;
+
+      sum = 0;
+
+      return result;
+    } else {
+      sum += x;
+
+      return lala;
+    }
+  };
+
+  return lala;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
