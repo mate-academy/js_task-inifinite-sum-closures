@@ -9,19 +9,21 @@ function makeInfinityAdder() {
   // write code here
   let acc = 0;
 
-  const adder = (num) => {
-    if (num) {
-      acc += num
-      return adder;
-    }
+  const adder = (num) => { 
     if (!num) {
       let temp = acc;
       acc = 0;
-      return temp;
+
+      return temp; 
     }
-  }
+    acc += num;
+
+    return adder;
+  };
 
   return adder;
 }
 
 module.exports = makeInfinityAdder;
+
+
