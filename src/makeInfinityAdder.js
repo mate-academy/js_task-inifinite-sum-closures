@@ -3,7 +3,7 @@
 function makeAdder() {
   let sum = 0;
 
-  const lala = (x) => {
+  const adder = (x) => {
     if (x === undefined) {
       const result = sum;
 
@@ -13,11 +13,11 @@ function makeAdder() {
     } else {
       sum += x;
 
-      return lala;
+      return adder;
     }
   };
 
-  return lala;
+  return adder;
 }
 
 module.exports = makeAdder;
