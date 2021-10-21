@@ -44,6 +44,15 @@ test('Should work with long chains', () => {
   expect(actual).toBe(expected);
 });
 
+test('Should work with chains containing zero as argument', () => {
+  const adder = makeInfinityAdder();
+
+  const actual = adder(1)(1)(1)(1)(0)(1)(1)(1)();
+  const expected = 7;
+
+  expect(actual).toBe(expected);
+});
+
 test('Should clear value for empty argument call', () => {
   const adder = makeInfinityAdder();
 
