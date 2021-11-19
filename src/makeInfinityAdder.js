@@ -26,10 +26,6 @@ function makeInfinityAdder() {
     };
   };
 
-  add.valueOf = function() {
-    return sum;
-  };
-
   return add;
 }
 
