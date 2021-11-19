@@ -7,25 +7,30 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let count = 0;
 
-  const sumarise = (a) => {
-    if (count > 0) {
-      sum = 0;
-    }
-
-    if (typeof a === 'number') {
-      sum += a;
-
-      return sumarise;
-    } else {
-      count++;
-
+  const add = (a) => {
+    if (a === undefined) {
       return sum;
     }
+
+    return (b) => {
+      if (b === undefined) {
+        sum = 0;
+
+        return a;
+      }
+
+      sum = a + b;
+
+      return add(sum);
+    };
   };
 
-  return sumarise;
+  add.valueOf = function() {
+    return sum;
+  };
+
+  return add;
 }
 
 module.exports = makeInfinityAdder;
