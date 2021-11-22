@@ -6,19 +6,19 @@
  */
 
 function makeInfinityAdder() {
-  let res = 0;
-  let copyRes;
+  let currentSum = 0;
+  let copyCurrentSum;
 
   function foo(value) {
     if (value !== undefined) {
-      res += value;
+      currentSum += value;
 
       return foo;
     } else {
-      copyRes = res;
-      res = 0;
+      copyCurrentSum = currentSum;
+      currentSum = 0;
 
-      return copyRes;
+      return copyCurrentSum;
     }
   }
 
