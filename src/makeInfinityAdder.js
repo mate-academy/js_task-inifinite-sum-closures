@@ -10,20 +10,16 @@ function makeInfinityAdder() {
 
   const add = (a) => {
     if (a === undefined) {
-      return sum;
+      const result = sum;
+
+      sum = 0;
+
+      return result;
     }
 
-    return (b) => {
-      if (b === undefined) {
-        sum = 0;
+    sum += a;
 
-        return a;
-      }
-
-      sum = a + b;
-
-      return add(sum);
-    };
+    return add;
   };
 
   return add;
