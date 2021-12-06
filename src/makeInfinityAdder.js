@@ -7,13 +7,16 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let count = 0;
   const adder = function(num) {
-    if (arguments.length === 0) {
-      sum = (count === 0) ? sum : 0;
-      count = (count === 0) ? 1 : 0;
+    // якщо if (!num), то не проходить тест
+    // Should work with chains containing zero as argument
 
-      return sum;
+    if (arguments.length === 0) {
+      const result = sum;
+
+      sum = 0;
+
+      return result;
     } else {
       sum += num;
 
