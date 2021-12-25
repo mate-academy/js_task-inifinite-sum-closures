@@ -10,7 +10,7 @@ function makeInfinityAdder() {
 
   return function adder(num) {
     if (typeof num === 'number') {
-      sum = sum + num;
+      sum += num;
 
       return adder;
     }
