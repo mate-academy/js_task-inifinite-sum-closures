@@ -11,15 +11,15 @@ function makeInfinityAdder() {
   return function adder(value) {
     if (typeof value === 'number') {
       buffer += value;
-    } else {
-      const sum = buffer;
 
-      buffer = 0;
-
-      return sum;
+      return adder;
     }
 
-    return adder;
+    const sum = buffer;
+
+    buffer = 0;
+
+    return sum;
   };
 }
 
