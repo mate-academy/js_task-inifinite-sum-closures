@@ -15,12 +15,10 @@ function makeInfinityAdder() {
       sumOuter = 0;
 
       return sumInner;
-    } else {
-      sumInner += x;
-      sumOuter = sumInner;
-
-      return adder;
     }
+    sumOuter += x;
+
+    return adder;
   };
 
   return adder;
