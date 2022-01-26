@@ -6,7 +6,23 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
+  let sum = 0;
+
+  const adder = (argument) => {
+    if (argument === undefined) {
+      const total = sum;
+
+      sum = 0;
+
+      return total;
+    }
+
+    sum += argument;
+
+    return adder;
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
