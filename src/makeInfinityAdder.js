@@ -15,15 +15,17 @@ function makeInfinityAdder() {
       allsum = 0;
 
       return x;
-    } else if (argument.length === 0) {
+    }
+
+    if (argument.length === 0) {
       allsum = 0;
 
       return adder;
-    } else {
-      allsum += argument;
-
-      return adder;
     }
+
+    allsum += argument;
+
+    return adder;
   };
 
   return adder;
