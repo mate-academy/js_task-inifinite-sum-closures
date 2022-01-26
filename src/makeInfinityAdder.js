@@ -17,10 +17,6 @@ function makeInfinityAdder() {
       return total;
     }
 
-    if (argument.length === 0) {
-      sum = 0;
-    }
-
     sum += argument;
 
     return adder;
