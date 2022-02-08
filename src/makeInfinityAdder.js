@@ -6,22 +6,24 @@
  */
 
 function makeInfinityAdder() {
+  let sum = 0;
+
   function adder(x) {
+    if (typeof x === 'number') {
+      sum += x;
+
+      return adder;
+    };
+
     if (!x) {
-      return 0;
+      const sumCopy = sum;
+
+      sum = 0;
+
+      return sumCopy;
     }
 
-    let sum = x;
-
-    return function next(y) {
-      if (y || y === 0) {
-        sum += y;
-
-        return next;
-      }
-
-      return sum;
-    };
+    return sum;
   };
 
   return adder;
