@@ -8,15 +8,15 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  function adder(num) {
-    if (num === undefined) {
+  function adder(number) {
+    if (number === undefined) {
       const currentResult = sum;
 
       sum = 0;
 
       return currentResult;
     }
-    sum += num;
+    sum += number;
 
     return adder;
   }
