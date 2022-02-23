@@ -6,21 +6,21 @@
  */
 
 function makeInfinityAdder() {
-  const adder = (a) => {
-    if (a || a === 0) {
-      return (b) => {
-        if (b || b === 0) {
-          return adder(a + b);
-        } else {
-          return a;
-        }
-      };
+  let sum = 0;
+
+  return function adder(a) {
+    if (a === undefined) {
+      const result = sum;
+
+      sum = 0;
+
+      return result;
     }
 
-    return 0;
-  };
+    sum += a;
 
-  return adder;
+    return adder;
+  };
 }
 
 module.exports = makeInfinityAdder;
