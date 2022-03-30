@@ -5,20 +5,24 @@
  * @return {function}
  */
 
-function makeInfinityAdder(fn = (x, y) => x + y) {
-  const inner = (...args) => {
-    return innerIn => {
-      if (!innerIn && innerIn !== 0) {
-        return args.reduce((a, b) => {
-          return fn.call(fn, a, b);
-        }, 0);
-      }
+function makeInfinityAdder() {
+  let counter = 0;
 
-      return inner(...args, innerIn);
-    };
+  const inner = (number) => {
+    if (number === undefined) {
+      const lastCount = counter;
+
+      counter = 0;
+
+      return lastCount;
+    }
+
+    counter += number;
+
+    return inner;
   };
 
-  return inner();
+  return inner;
 }
 
 module.exports = makeInfinityAdder;
