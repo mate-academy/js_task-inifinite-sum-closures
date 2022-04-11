@@ -11,7 +11,7 @@ function makeInfinityAdder() {
   function adder(number) {
     const result = sumOfNums;
 
-    if (!number) {
+    if (typeof number !== 'number') {
       sumOfNums = 0;
 
       return result;
