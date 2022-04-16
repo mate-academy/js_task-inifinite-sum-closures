@@ -24,7 +24,3 @@ function makeInfinityAdder(value) {
 }
 
 module.exports = makeInfinityAdder;
-
-// function add(value) {
-
-// };
