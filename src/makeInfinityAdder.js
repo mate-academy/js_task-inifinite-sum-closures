@@ -5,8 +5,8 @@
  * @return {function}
  */
 
-function makeInfinityAdder() {
-  let sum = 0;
+function makeInfinityAdder(prev = 0) {
+  let sum = prev;
 
   const secondAdder = (num) => {
     if (typeof num !== 'number') {
