@@ -5,10 +5,10 @@
  * @return {function}
  */
 
-function makeInfinityAdder(num1) {
-  let sum = num1 || 0;
+function makeInfinityAdder(num1 = 0) {
+  let sum = num1;
 
-  const foo = (num2) => {
+  const adder = (num2) => {
     if (num2 === undefined) {
       const result = sum;
 
@@ -19,12 +19,10 @@ function makeInfinityAdder(num1) {
 
     sum += num2;
 
-    return foo;
+    return adder;
   };
 
-  foo.valueOf = () => sum;
-
-  return foo;
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
