@@ -9,17 +9,17 @@ function makeInfinityAdder() {
   let totalSum = 0;
 
   const adder = (value) => {
-    if (typeof value !== 'number') {
+    if (value === undefined) {
       const result = totalSum;
 
       totalSum = 0;
 
       return result;
-    } else {
-      totalSum += value;
-
-      return adder;
     }
+
+    totalSum += value;
+
+    return adder;
   };
 
   return adder;
