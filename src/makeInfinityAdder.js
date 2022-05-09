@@ -8,26 +8,18 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  return function adder(current) {
-    if (current === undefined) {
-      const clear = sum;
+  return function adder(input) {
+    if (input === undefined) {
+      const newSum = sum;
 
       sum = 0;
 
-      return clear;
+      return newSum;
     }
 
-    sum += current;
+    sum += input;
 
-    return function(input) {
-      if (input || input === 0) {
-        sum += input;
-
-        return adder;
-      } else {
-        return sum;
-      }
-    };
+    return adder;
   };
 };
 
