@@ -21,9 +21,9 @@ function makeInfinityAdder() {
       sum = 0;
 
       return newSum;
-    } else {
-      sum += num;
     }
+
+    sum += num;
 
     return adder;
   };
