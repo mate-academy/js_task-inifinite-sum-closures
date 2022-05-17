@@ -11,11 +11,11 @@ function makeInfinityAdder() {
 
   const adder = (number) => {
     if (!number && number !== 0) {
-      const notDelete = finalResult;
+      const emptyArg = finalResult;
 
       finalResult = 0;
 
-      return notDelete;
+      return emptyArg;
     }
 
     finalResult += number;
