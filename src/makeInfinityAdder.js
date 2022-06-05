@@ -7,23 +7,19 @@
 
 function makeInfinityAdder() {
   // write code here
+  let clear = 0;
+
   return function adder(a) {
-    let sum = a;
-
     if (a === undefined) {
-      return 0;
+      const sum = clear;
+
+      clear = 0;
+
+      return sum;
     }
+    clear += a;
 
-    function foo(b) {
-      if (b === undefined) {
-        return sum;
-      }
-      sum += b;
-
-      return foo;
-    }
-
-    return foo;
+    return adder;
   };
 }
 
