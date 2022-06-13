@@ -6,29 +6,23 @@
  */
 
 function makeInfinityAdder() {
-  return function adder(num) {
-    if (typeof num === 'undefined') {
-      return 0;
-    }
+  let sum = 0;
 
-    let sum = 0;
+  const adder = function(num) {
+    if (typeof num !== 'number') {
+      const result = sum;
+
+      sum = 0;
+
+      return result;
+    }
 
     sum += num;
 
-    return function newAdder(newNum) {
-      if (typeof newNum === 'undefined') {
-        const result = sum;
-
-        sum = 0;
-
-        return result;
-      }
-
-      sum += newNum;
-
-      return newAdder;
-    };
+    return adder;
   };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
