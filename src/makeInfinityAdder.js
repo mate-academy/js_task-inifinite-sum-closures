@@ -11,8 +11,8 @@ function makeInfinityAdder() {
   let count = 0;
 
   const add = (...args) => {
-    for (const x of args) {
-      sum = sum + x;
+    if (args.length > 0) {
+      sum += Number(args);
       count++;
 
       return add;
