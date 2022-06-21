@@ -6,22 +6,20 @@
  */
 
 function makeInfinityAdder() {
-  return (a) => {
-    let sum = a;
+  let sum = 0;
 
-    if (sum === undefined) {
-      return 0;
+  return function adder(b) {
+    if (isNaN(b)) {
+      const currentSum = sum;
+
+      sum = 0;
+
+      return currentSum;
     }
 
-    return function adder(b) {
-      if (b !== undefined) {
-        sum += b;
-      } else {
-        return sum;
-      };
+    sum += b;
 
-      return adder;
-    };
+    return adder;
   };
 }
 
