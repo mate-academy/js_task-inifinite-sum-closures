@@ -9,9 +9,9 @@ function makeInfinityAdder() {
   let result = 0;
 
   const nextValue = function(n) {
-    const amount = result;
-
     if (n === undefined) {
+      const amount = result;
+
       result = 0;
 
       return amount;
