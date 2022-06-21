@@ -9,17 +9,17 @@ function makeInfinityAdder() {
   let temporarySum = 0;
 
   return function add(input) {
-    if (typeof input === 'undefined') {
+    if (input === undefined) {
       const temporarySumCopy = temporarySum;
 
       temporarySum = 0;
 
       return temporarySumCopy;
-    } else {
-      temporarySum += input;
-
-      return add;
     }
+
+    temporarySum += input;
+
+    return add;
   };
 }
 
