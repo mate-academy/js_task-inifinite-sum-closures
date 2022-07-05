@@ -14,10 +14,6 @@ function makeInfinityAdder(initialValue = 0) {
     return makeInfinityAdder(initialValue + value);
   };
 
-  adder.valueOf = () => {
-    return initialValue;
-  };
-
   return adder;
 }
 
