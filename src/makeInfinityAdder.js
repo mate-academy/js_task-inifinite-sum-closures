@@ -8,10 +8,6 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const add = (x) => {
-    sum += x;
-  };
-
   const adder = (a) => {
     if (typeof a !== 'number') {
       const temp = sum;
@@ -21,7 +17,7 @@ function makeInfinityAdder() {
       return temp;
     }
 
-    add(a);
+    sum += a;
 
     return adder;
   };
