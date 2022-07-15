@@ -16,11 +16,11 @@ function makeInfinityAdder(numberFirst) {
     }
 
     if (!numberSecond) {
-      const res = sum;
+      const result = sum;
 
       sum = 0;
 
-      return res;
+      return result;
     }
 
     return sum;
