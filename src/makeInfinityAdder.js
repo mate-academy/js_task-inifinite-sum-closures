@@ -7,18 +7,14 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let emptyArgCall = false;
 
   const addition = function(number) {
     if (arguments.length === 0) {
-      if (!emptyArgCall) {
-        emptyArgCall = true;
+      const result = sum;
 
-        return sum;
-      }
       sum = 0;
 
-      return sum;
+      return result;
     }
 
     sum += number;
