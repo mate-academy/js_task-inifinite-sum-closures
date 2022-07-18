@@ -13,15 +13,13 @@ function makeInfinityAdder(numberFirst) {
       sum += numberSecond;
 
       return next;
-    } else if (!numberSecond) {
+    } else {
       const result = sum;
 
       sum = 0;
 
       return result;
     }
-
-    return sum;
   }
 
   return next;
