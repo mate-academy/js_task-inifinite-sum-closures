@@ -5,8 +5,8 @@
  * @return {function}
  */
 
-function makeInfinityAdder(a = 0) {
-  let sum = a;
+function makeInfinityAdder() {
+  let sum = 0;
 
   function adder(b) {
     if (b === undefined) {
