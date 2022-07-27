@@ -7,23 +7,21 @@
 
 function makeInfinityAdder() {
   // write code here
-  const addRol = (out) => {
-    if (out !== undefined) {
-      const arr = (inner) => {
-        if (inner !== undefined) {
-          return addRol(out + inner);
-        } else {
-          return out;
-        }
-      };
+  let outerValue = 0;
 
-      return arr;
+  return function addRol(innerValue) {
+    if (innerValue !== undefined) {
+      outerValue += innerValue;
+    } else {
+      const result = outerValue;
+
+      outerValue = 0;
+
+      return result;
     }
 
-    return 0;
+    return addRol;
   };
-
-  return addRol;
 }
 
 module.exports = makeInfinityAdder;
