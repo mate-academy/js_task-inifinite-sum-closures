@@ -10,11 +10,11 @@ function makeInfinityAdder() {
 
   const adder = (num) => {
     if (num === undefined) {
-      const b = result;
+      const resultFinish = result;
 
       result = 0;
 
-      return b;
+      return resultFinish;
     }
 
     result += num;
