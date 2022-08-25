@@ -11,17 +11,15 @@ function makeInfinityAdder() {
   function adder(number) {
     if (typeof number !== 'undefined') {
       result += number;
+
+      return adder;
     }
 
-    if (typeof number === 'undefined') {
-      const temp = result;
+    const temp = result;
 
-      result = 0;
+    result = 0;
 
-      return temp;
-    }
-
-    return adder;
+    return temp;
   }
 
   return adder;
