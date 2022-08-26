@@ -8,7 +8,7 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  return function adder(number) {
+  const adder = number => {
     if (number !== undefined) {
       sum += number;
 
@@ -21,6 +21,8 @@ function makeInfinityAdder() {
 
     return totalSum;
   };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
