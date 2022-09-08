@@ -6,20 +6,18 @@
  */
 
 function makeInfinityAdder() {
-  let adderInput = [0];
+  let adderInput = 0;
 
   const adder = (n) => {
     if (n === undefined) {
-      const res = adderInput.reduce((total, el) => {
-        return total + el;
-      }, 0);
+      const res = adderInput;
 
-      adderInput = [0];
+      adderInput = 0;
 
       return res;
     };
 
-    adderInput.push(n);
+    adderInput += n;
 
     return adder;
   };
