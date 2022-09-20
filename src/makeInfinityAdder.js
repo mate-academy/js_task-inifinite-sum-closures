@@ -10,22 +10,16 @@ function makeInfinityAdder() {
 
   const adder = (valueFromUser) => {
     if (valueFromUser === undefined) {
+      const stopValue = startValue;
+
       startValue = 0;
 
-      return startValue;
+      return stopValue;
     }
 
-    return (nextValueFromUser) => {
-      if (nextValueFromUser === undefined) {
-        startValue = 0;
+    startValue += valueFromUser;
 
-        return valueFromUser;
-      }
-
-      startValue = valueFromUser + nextValueFromUser;
-
-      return adder(startValue);
-    };
+    return adder;
   };
 
   return adder;
