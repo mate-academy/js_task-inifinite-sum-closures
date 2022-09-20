@@ -6,23 +6,20 @@
  */
 
 function makeInfinityAdder() {
-  let result = 0;
-  let count = 0;
+  let sum = 0;
 
   const makeAdder = (number) => {
-    if (number || number === 0) {
-      result += number;
+    const acc = sum;
+
+    if (number !== undefined) {
+      sum += number;
 
       return makeAdder;
     }
 
-    count++;
+    sum = 0;
 
-    if (count % 2 === 0) {
-      result = 0;
-    }
-
-    return result;
+    return acc;
   };
 
   return makeAdder;
