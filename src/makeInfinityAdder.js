@@ -10,7 +10,7 @@ function makeInfinityAdder() {
 
   const add = (currentNumber) => {
     if (currentNumber !== undefined) {
-      total += currentNumber;
+      total += +currentNumber;
 
       return add;
     }
