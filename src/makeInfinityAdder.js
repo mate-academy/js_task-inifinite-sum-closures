@@ -9,15 +9,15 @@ function makeInfinityAdder() {
   // write code here
   let temp = 0;
 
-  return function adder(args) {
-    if (isNaN(args)) {
+  return function adder(nums) {
+    if (isNaN(nums)) {
       const sum = temp;
 
       temp = 0;
 
       return sum;
     }
-    temp += args;
+    temp += nums;
 
     return adder;
   };
