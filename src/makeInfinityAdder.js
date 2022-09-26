@@ -7,16 +7,16 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let sumIsShowed = 0;
+  let sumIsShowed = false;
 
   return function adder(number) {
-    if (sumIsShowed > 0) {
+    if (sumIsShowed) {
       sum = 0;
-      sumIsShowed = 0;
+      sumIsShowed = false;
     }
 
     if (arguments.length === 0) {
-      sumIsShowed++;
+      sumIsShowed = true;
 
       return sum;
     }
