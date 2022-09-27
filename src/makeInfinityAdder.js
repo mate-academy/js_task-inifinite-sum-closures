@@ -7,12 +7,12 @@
 
 function makeInfinityAdder() {
   function adder(valueA) {
-    if (!arguments.length) {
+    if (!isFinite(valueA)) {
       return 0;
     }
 
     return function(valueB) {
-      if (!arguments.length) {
+      if (!isFinite(valueB)) {
         return valueA;
       }
 
