@@ -6,22 +6,18 @@
  */
 
 function makeInfinityAdder() {
-  let sum = 0;
-  let sumIsShowed = false;
+  let currentSum = 0;
 
   return function adder(number) {
-    if (sumIsShowed) {
-      sum = 0;
-      sumIsShowed = false;
-    }
+    if (number === undefined) {
+      const sum = currentSum;
 
-    if (arguments.length === 0) {
-      sumIsShowed = true;
+      currentSum = 0;
 
       return sum;
     }
 
-    sum += number;
+    currentSum += number;
 
     return adder;
   };
