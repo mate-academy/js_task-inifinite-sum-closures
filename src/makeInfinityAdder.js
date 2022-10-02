@@ -7,22 +7,19 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let count = 0;
 
-  const adder = (number) => {
-    if (count && !number) {
-      sum = 0;
-    }
+  const adder = number => {
+    const total = sum;
 
     if (number >= 0) {
       sum += number;
-    } else {
-      count++;
 
-      return sum;
-    };
+      return adder;
+    }
 
-    return adder;
+    sum = 0;
+
+    return total;
   };
 
   return adder;
