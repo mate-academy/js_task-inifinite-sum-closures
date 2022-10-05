@@ -7,7 +7,7 @@
 
 function makeInfinityAdder() {
   const adder = function(a) {
-    if (!a) {
+    if (arguments.length === 0) {
       return 0;
     }
 
