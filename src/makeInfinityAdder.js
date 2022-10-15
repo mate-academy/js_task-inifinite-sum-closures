@@ -8,9 +8,6 @@
 function makeInfinityAdder() {
   let sum = 0;
   let sum2 = 0;
-  // let count = 0;
-
-  // count++;
 
   function adder(num) {
     if (num) {
