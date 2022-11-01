@@ -14,14 +14,10 @@ function makeInfinityAdder() {
       result += x;
     }
 
-    if (x === undefined && result > 0) {
+    if (x === undefined) {
       cleanResult++;
 
       return cleanResult === 2 ? 0 : result;
-    }
-
-    if (x === undefined && result === 0) {
-      return 0;
     }
 
     return adder;
