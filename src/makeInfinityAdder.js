@@ -6,17 +6,17 @@
  */
 
 function makeInfinityAdder() {
-  let accamulate = 0;
+  let accumulate = 0;
 
   const f = (adder = null) => {
     if (adder !== null) {
-      accamulate += adder;
+      accumulate += adder;
 
       return f;
     } else {
-      const answer = accamulate;
+      const answer = accumulate;
 
-      accamulate = 0;
+      accumulate = 0;
 
       return answer;
     }
