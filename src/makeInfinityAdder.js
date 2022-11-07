@@ -9,12 +9,6 @@ function makeInfinityAdder() {
   let result = 0;
 
   const adder = (number) => {
-    if (number || number === 0) {
-      result += number;
-
-      return adder;
-    }
-
     if (number === undefined) {
       const tmp = result;
 
@@ -22,6 +16,10 @@ function makeInfinityAdder() {
 
       return tmp;
     }
+
+    result += number;
+
+    return adder;
   };
 
   return adder;
