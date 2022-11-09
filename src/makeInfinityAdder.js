@@ -21,7 +21,6 @@ function makeInfinityAdder() {
 
     return adder;
   };
-
 }
 
 module.exports = makeInfinityAdder;
