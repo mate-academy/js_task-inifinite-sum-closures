@@ -7,25 +7,22 @@
 
 function makeInfinityAdder() {
   let currentSum = 0;
-  let count = 0;
 
-  function sum(x) {
-    if (count > 0) {
-      return (currentSum = 0);
-    }
-
+  function adder(x) {
     if (x === undefined) {
-      count++;
+      const total = currentSum;
 
-      return currentSum;
+      currentSum = 0;
+
+      return total;
     } else {
       currentSum += x;
 
-      return sum;
+      return adder;
     }
   }
 
-  return sum;
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
