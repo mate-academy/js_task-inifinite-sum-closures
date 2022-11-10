@@ -8,23 +8,21 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const next = (...args) => {
-    return (x) => {
-      if (x === undefined) {
-        const result = sum;
+  const next = (x) => {
+    if (x === undefined) {
+      const result = sum;
 
-        sum = 0;
+      sum = 0;
 
-        return result;
-      }
+      return result;
+    }
 
-      sum = x + sum;
+    sum = x + sum;
 
-      return next(...args, x);
-    };
+    return next;
   };
 
-  return next();
+  return next;
 }
 
 module.exports = makeInfinityAdder;
