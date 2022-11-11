@@ -8,15 +8,20 @@
 function makeInfinityAdder() {
   // write code here
 
-  let result = 0;
+  let result = 0; // declare variable to store count
 
-  return (a) => {
+  return function addition(number) {
     if (arguments.length === 0) {
-      return 0;
-    }
-    result += a + result;
+      const newResult = result;
 
-    return result;
+      result = 0;
+
+      return newResult;
+    }
+
+    result += number;
+
+    return addition;
   };
 }
 
