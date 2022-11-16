@@ -10,22 +10,18 @@ function makeInfinityAdder() {
   let sum = 0;
 
   return function ad(x) {
-    if (x || x === 0) {
+    if (typeof x === 'number') {
       sum += x;
 
       return ad;
     } else {
       count++;
 
-      if (count === 1) {
-        return sum;
-      }
-
       if (count > 1) {
         sum = 0;
-
-        return sum;
       }
+
+      return sum;
     }
   };
 }
