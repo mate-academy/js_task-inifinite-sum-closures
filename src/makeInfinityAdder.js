@@ -7,11 +7,11 @@
 
 function makeInfinityAdder() {
   let amount = 0;
-  let result;
 
   function adder(number) {
     if (number === undefined) {
-      result = amount;
+      const result = amount;
+
       amount = 0;
 
       return result;
