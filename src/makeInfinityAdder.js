@@ -7,9 +7,9 @@
 
 function makeInfinityAdder() {
   return function adder(a) {
-    if (a >= 0) {
+    if (a !== undefined) {
       return function(b) {
-        if (b >= 0) {
+        if (b !== undefined) {
           return adder(a + b);
         }
 
