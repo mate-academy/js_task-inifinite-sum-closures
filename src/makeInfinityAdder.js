@@ -12,13 +12,13 @@ function makeInfinityAdder() {
       sum += element;
 
       return makeAdder;
-    } else {
-      const lastSum = sum;
-
-      sum = 0;
-
-      return lastSum;
     }
+
+    const lastSum = sum;
+
+    sum = 0;
+
+    return lastSum;
   };
 
   return makeAdder;
