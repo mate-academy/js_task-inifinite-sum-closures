@@ -22,10 +22,6 @@ function makeInfinityAdder() {
     return adder;
   };
 
-  adder.toString = () => {
-    return sum;
-  };
-
   return adder;
 }
 
