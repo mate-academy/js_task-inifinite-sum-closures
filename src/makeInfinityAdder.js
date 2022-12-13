@@ -15,11 +15,11 @@ function makeInfinityAdder() {
       return adder;
     }
 
-    const clear = sum;
+    const sumCopy = sum;
 
     sum = 0;
 
-    return clear;
+    return sumCopy;
   };
 
   return adder;
