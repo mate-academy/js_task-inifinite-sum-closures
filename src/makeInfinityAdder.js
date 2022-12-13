@@ -6,7 +6,20 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
+  let result = 0;
+
+  return function adder(x) {
+    if (x === undefined) {
+      const resAdd = result;
+
+      result = 0;
+
+      return resAdd;
+    }
+    result += x;
+
+    return adder;
+  };
 }
 
 module.exports = makeInfinityAdder;
