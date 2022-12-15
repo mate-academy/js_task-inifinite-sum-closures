@@ -11,14 +11,15 @@ function makeInfinityAdder() {
   let sum = 0;
 
   const adder = (param) => {
-    if (param >= 0) {
-      sum += param;
-    } else {
+    if (param === undefined) {
       res = sum;
+
       sum = 0;
 
       return res;
     }
+
+    sum += param;
 
     return adder;
   };
