@@ -9,19 +9,11 @@ function makeInfinityAdder() {
   let currentSum = 0;
   let count = 0;
   const adder = (number) => {
-    if (number === undefined && count === 0) {
-      count++;
-
-      return currentSum;
-    }
-
-    if (number === undefined && count === 1) {
+    if (!number) {
       currentSum = 0;
 
       return currentSum;
     }
-
-    currentSum = number;
 
     const result = (num) => {
       if (num === undefined && count === 0) {
@@ -39,6 +31,8 @@ function makeInfinityAdder() {
 
       return result;
     };
+
+    result(number);
 
     return result;
   };
