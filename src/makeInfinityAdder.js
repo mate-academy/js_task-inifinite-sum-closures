@@ -7,34 +7,18 @@
 
 function makeInfinityAdder() {
   let currentSum = 0;
-  let count = 0;
   const adder = (number) => {
-    if (!number) {
+    if (number === undefined) {
+      const result = currentSum;
+
       currentSum = 0;
 
-      return currentSum;
+      return result;
     }
 
-    const result = (num) => {
-      if (num === undefined && count === 0) {
-        count++;
+    currentSum += number;
 
-        return currentSum;
-      }
-
-      if (num === undefined && count === 1) {
-        currentSum = 0;
-
-        return currentSum;
-      }
-      currentSum += num;
-
-      return result;
-    };
-
-    result(number);
-
-    return result;
+    return adder;
   };
 
   return adder;
