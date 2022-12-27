@@ -5,44 +5,24 @@
  * @return {function}
  */
 
-function makeInfinityAdder(number) {
+function makeInfinityAdder(sum = 0) {
   // write code here
 
-  let result = 0;
+  let final = 0;
 
-  let count2 = 0;
+  const add = (number) => {
+    if (number === undefined) {
+      const store = sum;
 
-  const final = (val) => {
-    let count = val;
+      return store;
+    } else {
+      final = sum + number;
 
-    if (val || val === 0) {
-      return (arg) => {
-        if (arg || arg === 0) {
-          count += arg;
-
-          result = count;
-
-          return final(count);
-        } else {
-          count2++;
-
-          result = 0;
-
-          return count;
-        }
-      };
+      return makeInfinityAdder(final);
     }
-
-    if (count2 > 0) {
-      result = 0;
-
-      return 0;
-    }
-
-    return result;
   };
 
-  return final;
+  return add;
 }
 
 module.exports = makeInfinityAdder;
