@@ -9,9 +9,9 @@ function makeInfinityAdder() {
   let counter = 0;
   let finalSum;
 
-  const infiniteAdder = (...args) => {
-    if (args.length) {
-      counter += Number([...args]);
+  const infiniteAdder = (summand) => {
+    if (summand !== undefined) {
+      counter += summand;
 
       return infiniteAdder;
     }
