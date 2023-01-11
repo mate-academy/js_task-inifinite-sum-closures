@@ -9,9 +9,9 @@ function makeInfinityAdder() {
   let sum = 0;
 
   function add(a) {
-    const sumCopy = sum;
-
     if (arguments.length === 0) {
+      const sumCopy = sum;
+
       sum = 0;
 
       return sumCopy;
