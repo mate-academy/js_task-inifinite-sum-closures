@@ -9,12 +9,12 @@ function makeInfinityAdder() {
   let sum = 0;
 
   return function adder(num) {
-    if (num !== 0 && !num) {
-      const sums = sum;
+    if (num === undefined) {
+      const returnSum = sum;
 
       sum = 0;
 
-      return sums;
+      return returnSum;
     }
 
     sum += num;
