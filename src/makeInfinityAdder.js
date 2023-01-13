@@ -6,7 +6,21 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
+  let numbers = 0;
+
+  return function adder(num) {
+    if (typeof num === 'number') {
+      numbers += num;
+
+      return adder;
+    } else {
+      const result = numbers;
+
+      numbers = 0;
+
+      return result;
+    }
+  };
 }
 
 module.exports = makeInfinityAdder;
