@@ -4,7 +4,6 @@
  *
  * @return {function}
  */
-
 function makeInfinityAdder() {
   let total = 0;
 
