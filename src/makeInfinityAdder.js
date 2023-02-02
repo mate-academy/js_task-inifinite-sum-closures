@@ -10,7 +10,7 @@ function makeInfinityAdder() {
   // eslint-disable-next-line no-shadow
   function adder(item) {
     if (item !== undefined) {
-      total = total + item;
+      total += item;
     } else {
       const result = total;
 
