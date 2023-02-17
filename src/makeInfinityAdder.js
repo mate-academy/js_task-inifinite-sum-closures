@@ -13,13 +13,13 @@ function makeInfinityAdder() {
       count += figure;
 
       return iterate;
-    } else {
-      const endResult = count;
-
-      count = 0;
-
-      return endResult;
     }
+
+    const endResult = count;
+
+    count = 0;
+
+    return endResult;
   };
 
   return iterate;
