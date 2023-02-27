@@ -7,8 +7,9 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  const adder = (num = 'nothing passed') => {
-    if (num === 'nothing passed') {
+
+  function adder(num) {
+    if (arguments.length < 1) {
       const pseudoSum = sum;
 
       sum = 0;
