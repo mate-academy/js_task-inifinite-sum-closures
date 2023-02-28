@@ -8,8 +8,8 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const adder = (nums) => {
-    if (nums === undefined) {
+  const adder = (num) => {
+    if (num === undefined) {
       const sumCopy = sum;
 
       sum = 0;
@@ -17,7 +17,7 @@ function makeInfinityAdder() {
       return sumCopy;
     }
 
-    sum += nums;
+    sum += num;
 
     return adder;
   };
