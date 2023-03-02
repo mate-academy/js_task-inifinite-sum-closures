@@ -19,10 +19,10 @@ function makeInfinityAdder() {
 
     total += value;
 
-    return add;
+    return adder;
   };
 
-  return add;
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
