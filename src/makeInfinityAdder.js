@@ -7,13 +7,9 @@
 
 function makeInfinityAdder() {
   return function add(x) {
-    if (x || x === 0) {
+    if (x !== undefined) {
       return function(y) {
-        if (y || y === 0) {
-          return add(x + y);
-        } else {
-          return x;
-        };
+        return (y !== undefined) ? add(x + y) : x;
       };
     };
 
