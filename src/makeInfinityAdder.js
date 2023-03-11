@@ -15,12 +15,10 @@ function makeInfinityAdder() {
       sum = 0;
 
       return result;
-    } else {
-      sum += num;
+    } sum += num;
 
-      return adder;
-    }
+    return adder;
   };
-}
+};
 
 module.exports = makeInfinityAdder;
