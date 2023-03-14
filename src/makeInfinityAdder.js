@@ -7,26 +7,23 @@
 
 function makeInfinityAdder() {
   // write code here
-  const arr = [];
+  let result = 0;
 
-  const f = (x) => {
+  const summ = (x) => {
     if (x === undefined) {
-      const summ = arr.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-        0
-      );
+      const middle = result;
 
-      arr.length = 0;
+      result = 0;
 
-      return summ;
+      return middle;
     }
 
-    arr.push(x);
+    result += x;
 
-    return f;
+    return summ;
   };
 
-  return f;
+  return summ;
 }
 
 module.exports = makeInfinityAdder;
