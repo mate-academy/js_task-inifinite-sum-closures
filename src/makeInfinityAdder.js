@@ -7,8 +7,8 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  const functionA = numberA => {
-    if (numberA === undefined) {
+  const functionA = a => {
+    if (a === undefined) {
       const result = sum;
 
       sum = 0;
@@ -16,17 +16,17 @@ function makeInfinityAdder() {
       return result;
     }
 
-    sum += numberA;
+    sum += a;
 
-    const functionB = numberB => {
-      if (numberB === undefined) {
+    const functionB = b => {
+      if (b === undefined) {
         const result = sum;
 
         sum = 0;
 
         return result;
       }
-      sum += numberB;
+      sum += b;
 
       return functionA;
     };
