@@ -25,8 +25,4 @@ function makeInfinityAdder() {
   };
 };
 
-// const adder = makeInfinityAdder();
-
-// adder(1)(2)(3)(4)(5)(0)(7)(8)(9);
-
 module.exports = makeInfinityAdder;
