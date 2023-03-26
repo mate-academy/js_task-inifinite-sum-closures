@@ -8,11 +8,11 @@
 function makeInfinityAdder() {
   let count = 0;
 
-  return function Adder(value) {
+  return function adder(value) {
     if (arguments.length > 0) {
       count += value;
 
-      return Adder;
+      return adder;
     }
 
     const lastCount = count;
