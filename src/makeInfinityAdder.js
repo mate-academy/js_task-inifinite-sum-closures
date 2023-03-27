@@ -13,13 +13,13 @@ function makeInfinityAdder() {
       sum += args.reduce((acc, val) => acc + val, 0);
 
       return adder;
-    } else {
-      const result = sum;
-
-      sum = 0;
-
-      return result;
     }
+
+    const result = sum;
+
+    sum = 0;
+
+    return result;
   };
 }
 
