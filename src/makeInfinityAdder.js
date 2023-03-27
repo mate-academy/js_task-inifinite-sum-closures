@@ -8,28 +8,18 @@
 function makeInfinityAdder() {
   let amount = 0;
 
-  const adder = (firstNum) => {
-    let currentAmont = amount;
+  const adder = (incomeNumber) => {
+    if (incomeNumber === undefined) {
+      const currentAmont = amount;
 
-    if (firstNum === undefined) {
       amount = 0;
 
       return currentAmont;
-    } else {
-      currentAmont += firstNum;
+    }
 
-      return function recurringFunction(addNum) {
-        if (addNum === undefined) {
-          amount = 0;
+    amount += incomeNumber;
 
-          return currentAmont;
-        } else {
-          currentAmont += addNum;
-
-          return recurringFunction;
-        };
-      };
-    };
+    return adder;
   };
 
   return adder;
