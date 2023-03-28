@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeInfinityAdder(number) {
+function makeInfinityAdder() {
   let sumOfNumbers = 0;
 
   const adder = (value) => {
