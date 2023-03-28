@@ -16,6 +16,7 @@ function makeInfinityAdder(number) {
 
       return result;
     }
+
     sum += nextNumber;
 
     return adder;
