@@ -8,25 +8,22 @@
 function makeInfinityAdder() {
   // write code here
   let summ = 0;
-  let count = 0;
 
-  const checkAdd = (param, returnedFunc) => {
-    if (param || param === 0) {
-      summ += param;
+  const adder = (number) => {
+    if (number || number === 0) {
+      summ += number;
 
-      return returnedFunc;
-    };
+      return adder;
+    }
 
-    summ = count > 0 ? 0 : summ;
-    count++;
+    const result = summ;
 
-    return summ;
+    summ = 0;
+
+    return result;
   };
 
-  const adderFirstFunc = b => checkAdd(b, adderSecondFunc);
-  const adderSecondFunc = a => checkAdd(a, adderFirstFunc);
-
-  return adderFirstFunc;
-}
+  return adder;
+};
 
 module.exports = makeInfinityAdder;
