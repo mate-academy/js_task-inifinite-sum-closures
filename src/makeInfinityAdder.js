@@ -10,9 +10,9 @@ function makeInfinityAdder() {
       sum = 0;
 
       return returnValue;
-    } else {
-      sum += a;
     }
+
+    sum += a;
 
     return adder;
   };
