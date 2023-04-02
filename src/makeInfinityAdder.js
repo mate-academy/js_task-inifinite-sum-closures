@@ -13,23 +13,13 @@ function makeInfinityAdder() {
     if (x !== undefined) {
       sum += x;
 
-      return add;
+      return adder;
     }
     count++;
     sum = count > 1 ? 0 : sum;
 
     return sum;
   };
-
-  function add(y) {
-    if (y !== undefined) {
-      sum += y;
-
-      return adder;
-    }
-
-    return sum;
-  }
 
   return adder;
 }
