@@ -6,7 +6,6 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
   let res = 0;
 
   const func = (x) => {
