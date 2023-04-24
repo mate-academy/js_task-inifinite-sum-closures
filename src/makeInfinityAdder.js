@@ -1,10 +1,5 @@
 'use strict';
 
-/***
- *
- * @return {function}
- */
-
 function makeInfinityAdder() {
   let sum = 0;
 
