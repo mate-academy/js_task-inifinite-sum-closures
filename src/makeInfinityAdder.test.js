@@ -30,6 +30,7 @@ test('Should work with a chain of 2 numbers', () => {
   const adder = makeInfinityAdder();
 
   const actual = adder(1)(10)();
+
   const expected = 11;
 
   expect(actual).toBe(expected);
