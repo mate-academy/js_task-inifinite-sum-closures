@@ -7,7 +7,6 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  //experement
 
   return function myFunc(x) {
     const result = sum;
