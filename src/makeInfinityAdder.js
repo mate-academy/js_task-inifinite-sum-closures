@@ -4,9 +4,18 @@
  *
  * @return {function}
  */
-
 function makeInfinityAdder() {
-  // write code here
+  const adder = function(a) {
+    if (a === undefined) {
+      return 0;
+    };
+
+    return function(b) {
+      return (b !== undefined) ? adder(a + b) : a;
+    };
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
