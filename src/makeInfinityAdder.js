@@ -6,17 +6,17 @@
  */
 
 function makeInfinityAdder() {
-  let ammount = 0;
+  let sum = 0;
 
   function add(number) {
     if (number === undefined) {
-      const result = ammount;
+      const result = sum;
 
-      ammount = 0;
+      sum = 0;
 
       return result;
     }
-    ammount += number;
+    sum += number;
 
     return add;
   };
