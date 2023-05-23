@@ -8,21 +8,21 @@
 function makeInfinityAdder(initialValue = 0) {
   let total = initialValue;
 
-  const fn = curr => {
+  const added = curr => {
     if (curr === undefined) {
-      const result = total;
+      const currentTotal = total;
 
       total = 0;
 
-      return result;
+      return currentTotal;
     }
 
     total += curr;
 
-    return fn;
+    return added;
   };
 
-  return fn;
+  return added;
 }
 
 module.exports = makeInfinityAdder;
