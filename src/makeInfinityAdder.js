@@ -6,16 +6,20 @@
  */
 
 function makeInfinityAdder() {
+  let result = 0;
+
   return function sum(a) {
     if (arguments.length === 0) {
-      return 0;
+      const finalSum = result;
+
+      result = 0;
+
+      return finalSum;
     }
 
-    return function(b) {
-      return arguments.length > 0
-        ? sum(a + b)
-        : a;
-    };
+    result += a;
+
+    return sum;
   };
 }
 
