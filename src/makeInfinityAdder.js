@@ -6,18 +6,17 @@
  */
 
 function makeInfinityAdder() {
-  let sum = 0;
+  let result = 0;
 
-  return function adler(num) {
-    if (num === undefined) {
-      const add = sum;
+  return function adler(...nums) {
+    if (arguments.length === 0) {
+      const add = result;
 
-      sum = 0;
+      result = 0;
 
       return add;
-    };
-
-    sum += num;
+    }
+    result += nums.reduce((sum, num) => sum + num, 0);
 
     return adler;
   };
