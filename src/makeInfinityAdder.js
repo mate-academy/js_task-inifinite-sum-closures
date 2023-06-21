@@ -7,16 +7,14 @@
 
 function makeInfinityAdder() {
   let sum = 0;
-  let emptyCall = 0;
 
   const adder = (num) => {
     if (typeof num === 'undefined') {
-      sum = emptyCall > 0
-        ? 0
-        : sum;
-      emptyCall++;
+      const lastSum = sum;
 
-      return sum;
+      sum = 0;
+
+      return lastSum;
     }
     sum += num;
 
