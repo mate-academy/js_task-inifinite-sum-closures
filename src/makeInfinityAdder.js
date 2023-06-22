@@ -6,23 +6,20 @@
  */
 
 function makeInfinityAdder() {
-  let arr = [];
+  let sum = 0;
 
   const getValue = (value) => {
-    let num = value;
+    if (value === undefined) {
+      const curSum = sum;
 
-    while (num !== undefined) {
-      arr.push(num);
-      num++;
+      sum = 0;
 
-      return getValue;
+      return curSum;
     }
 
-    const sum = arr.reduce((a, b) => a + b, 0);
+    sum += value;
 
-    arr = [];
-
-    return sum;
+    return getValue;
   };
 
   return getValue;
