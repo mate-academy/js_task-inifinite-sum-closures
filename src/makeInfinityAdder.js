@@ -6,19 +6,10 @@
  */
 
 function makeInfinityAdder() {
-  const add = (val) => {
-    if (val !== undefined) {
-      return (arg) => {
-        if (arg !== undefined) {
-          return add(val + arg);
-        }
-
-        return val;
-      };
-    }
-
-    return 0;
-  };
+  const add = (val) =>
+    val !== undefined
+      ? (arg) => (arg !== undefined ? add(val + arg) : val)
+      : 0;
 
   return add;
 }
