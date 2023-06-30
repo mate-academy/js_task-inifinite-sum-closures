@@ -14,10 +14,16 @@ function makeInfinityAdder() {
 
       return (arg) => {
         if (arg !== undefined) {
-          return add(sum + arg);
+          sum += arg;
+
+          return add(sum);
         }
 
-        return sum;
+        const currSum = sum;
+
+        sum = 0;
+
+        return currSum;
       };
     }
     sum = 0;
