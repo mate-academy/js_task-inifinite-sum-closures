@@ -6,101 +6,115 @@
  */
 
 function makeInfinityAdder() {
-  let result = 0;
+  let sum = 0;
 
-  function suma(a) {
+  function add(a) {
     if (a !== undefined) {
-      result += a;
-    } else {
-      result = 0;
+      sum += a;
 
+      return add;
+    } else {
+      const result = sum;
+      sum = 0;
       return result;
     }
-
-    function sumb(b) {
-      if (b !== undefined) {
-        result += b;
-      } else {
-        return result;
-      }
-
-      function sumc(c) {
-        if (c !== undefined) {
-          result += c;
-        } else {
-          return result;
-        }
-
-        function sumd(d) {
-          if (d !== undefined) {
-            result += d;
-          } else {
-            return result;
-          }
-
-          function sume(e) {
-            if (e !== undefined) {
-              result += e;
-            } else {
-              return result;
-            }
-
-            function sumf(f) {
-              if (f !== undefined) {
-                result += f;
-              } else {
-                return result;
-              }
-
-              function sumg(g) {
-                if (g !== undefined) {
-                  result += g;
-                } else {
-                  return result;
-                }
-
-                function sumh(h) {
-                  if (h !== undefined) {
-                    result += h;
-                  } else {
-                    return result;
-                  }
-
-                  function sumi(i) {
-                    if (i !== undefined) {
-                      result += i;
-                    } else {
-                      return result;
-                    }
-
-                    return result;
-                  }
-
-                  return sumi;
-                }
-
-                return sumh;
-              }
-
-              return sumg;
-            }
-
-            return sumf;
-          }
-
-          return sume;
-        }
-
-        return sumd;
-      }
-
-      return sumc;
-    }
-
-    return sumb;
   }
 
-  return suma;
+  return add;
+
+  // function adda(a) {
+  //   if (a !== undefined) {
+  //     sum += a;
+  //   } else {
+  //     sum = 0;
+
+  //     return sum;
+  //   }
+
+  //   function addb(b) {
+  //     if (b !== undefined) {
+  //       sum += b;
+  //     } else {
+  //       return sum;
+  //     }
+
+  //     function addc(c) {
+  //       if (c !== undefined) {
+  //         sum += c;
+  //       } else {
+  //         return sum;
+  //       }
+
+  //       function addd(d) {
+  //         if (d !== undefined) {
+  //           sum += d;
+  //         } else {
+  //           return sum;
+  //         }
+
+  //         function adde(e) {
+  //           if (e !== undefined) {
+  //             sum += e;
+  //           } else {
+  //             return sum;
+  //           }
+
+  //           function addf(f) {
+  //             if (f !== undefined) {
+  //               sum += f;
+  //             } else {
+  //               return sum;
+  //             }
+
+  //             function addg(g) {
+  //               if (g !== undefined) {
+  //                 sum += g;
+  //               } else {
+  //                 return sum;
+  //               }
+
+  //               function addh(h) {
+  //                 if (h !== undefined) {
+  //                   sum += h;
+  //                 } else {
+  //                   return sum;
+  //                 }
+
+  //                 function addi(i) {
+  //                   if (i !== undefined) {
+  //                     sum += i;
+  //                   } else {
+  //                     return sum;
+  //                   }
+
+  //                   return sum;
+  //                 }
+
+  //                 return addi;
+  //               }
+
+  //               return addh;
+  //             }
+
+  //             return addg;
+  //           }
+
+  //           return addf;
+  //         }
+
+  //         return adde;
+  //       }
+
+  //       return addd;
+  //     }
+
+  //     return addc;
+  //   }
+
+  //   return addb;
+  // }
+
+  // return adda;
 }
 
 module.exports = makeInfinityAdder;
