@@ -17,7 +17,7 @@ function makeInfinityAdder() {
       return result;
     }
 
-    summary += 0;
+    summary += num;
 
     return adder;
   };
