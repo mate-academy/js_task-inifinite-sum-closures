@@ -8,19 +8,19 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  function adder(addedNumber) {
-    if (addedNumber !== undefined) {
-      sum += addedNumber;
+  const adder = (a) => {
+    if (a === undefined) {
+      const currentSum = sum;
 
-      return adder;
+      sum = 0;
+
+      return currentSum;
     }
 
-    const result = sum;
+    sum += a;
 
-    sum = 0;
-
-    return result;
-  }
+    return adder;
+  };
 
   return adder;
 }
