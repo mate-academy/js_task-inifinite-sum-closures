@@ -20,7 +20,6 @@ function makeInfinityAdder() {
     sum = 0;
 
     return actual;
-    ;
   };
 
   return adder;
