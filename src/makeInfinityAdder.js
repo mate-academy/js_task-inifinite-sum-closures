@@ -10,7 +10,7 @@ function makeInfinityAdder() {
 
   const result = function(num) {
     if (num === undefined) {
-      if (memory.length < 1) {
+      if (memory === 0) {
         return 0;
       }
 
