@@ -6,7 +6,7 @@
  */
 
 function makeInfinityAdder() {
-  let memory = [];
+  let memory = 0;
 
   const result = function(num) {
     if (num === undefined) {
@@ -14,14 +14,14 @@ function makeInfinityAdder() {
         return 0;
       }
 
-      const tempMemory = memory.reduce((sum, number) => sum + number);
+      const tempMemory = memory;
 
-      memory = [];
+      memory = 0;
 
       return tempMemory;
     }
 
-    memory.push(num);
+    memory += num;
 
     return result;
   };
