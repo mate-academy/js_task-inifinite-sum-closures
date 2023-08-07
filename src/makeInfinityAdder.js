@@ -10,10 +10,6 @@ function makeInfinityAdder() {
 
   const result = function(num) {
     if (num === undefined) {
-      if (sumParametr === 0) {
-        return 0;
-      }
-
       const tempSumParametr = sumParametr;
 
       sumParametr = 0;
