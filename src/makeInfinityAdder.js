@@ -15,11 +15,11 @@ function makeInfinityAdder() {
       sum = 0;
 
       return result;
-    } else {
-      sum += args;
-
-      return adder;
     }
+    
+    sum += args;
+
+    return adder;    
   };
 }
 
