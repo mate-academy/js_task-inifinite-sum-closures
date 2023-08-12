@@ -7,19 +7,22 @@
 
 function makeInfinityAdder() {
   let count = 0;
+  let callsWithNoNumCount = 0;
 
   const sum = (num) => {
-    const countCopy = count;
+    if (typeof num === 'undefined') {
+      callsWithNoNumCount += 1;
 
-    if (typeof num === 'number') {
-      count += num;
+      if (callsWithNoNumCount >= 2) {
+        count = 0;
+      }
 
-      return sum;
+      return count;
     }
 
-    count = 0;
+    count += num;
 
-    return countCopy;
+    return sum;
   };
 
   return sum;
