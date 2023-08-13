@@ -7,8 +7,8 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const adder = (number) => {
-    if (typeof number !== 'number') {
+  const adder = function(number) {
+    if (arguments.length === 0) {
       const result = sum;
 
       sum = 0;
@@ -16,7 +16,9 @@ function makeInfinityAdder() {
       return result;
     }
 
-    sum += number;
+    if (typeof number === 'number') {
+      sum += number;
+    }
 
     return adder;
   };
