@@ -8,8 +8,8 @@
 function makeInfinityAdder() {
   let collection = 0;
 
-  const adder = (...nums) => {
-    if (!nums.length) {
+  const adder = (num) => {
+    if (num === undefined) {
       const sum = collection;
 
       collection = 0;
@@ -17,9 +17,7 @@ function makeInfinityAdder() {
       return sum;
     }
 
-    // If the function takes more than one parameter
-    // sum it with reduce
-    collection += nums.reduce((acc, n) => acc + n, 0);
+    collection += num;
 
     return adder;
   };
