@@ -9,10 +9,8 @@ function makeInfinityAdder() {
   // write code here
   let sum = 0;
 
-  return function adder(add = false) {
-    sum += add;
-
-    if (add === false) {
+  const adder = add => {
+    if (add === undefined) {
       const result = sum;
 
       sum = 0;
@@ -20,8 +18,12 @@ function makeInfinityAdder() {
       return result;
     }
 
+    sum += add;
+
     return adder;
   };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
