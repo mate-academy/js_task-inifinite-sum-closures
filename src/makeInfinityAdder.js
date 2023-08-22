@@ -7,23 +7,20 @@
 
 function makeInfinityAdder() {
   // write code here
-  let SUM = 0;
-  let CURRENT_NUMBERS = [];
+  let sum = 0;
 
-  function adder(...args) {
-    if (args.length === 0) {
-      const result = SUM;
+  function adder(num) {
+    if (num !== undefined) {
+      sum += num;
 
-      SUM = 0;
-      CURRENT_NUMBERS = [];
-
-      return result;
+      return adder;
     }
 
-    CURRENT_NUMBERS.push(...args);
-    SUM += args.reduce((acc, num) => acc + num, 0);
+    const result = sum;
 
-    return adder;
+    sum = 0;
+
+    return result;
   }
 
   return adder;
