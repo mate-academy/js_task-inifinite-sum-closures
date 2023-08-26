@@ -8,16 +8,16 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const adder = a => {
+  const adder = (num) => {
     const result = sum;
 
-    if (a === undefined) {
+    if (num === undefined) {
       sum = 0;
 
       return result;
     }
 
-    sum += a;
+    sum += num;
 
     return adder;
   };
