@@ -6,7 +6,23 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
+  let sum = 0;
+
+  const adder = (value) => {
+    if (!isNaN(value)) {
+      sum += value;
+
+      return adder;
+    }
+
+    const temp = sum;
+
+    sum = 0;
+
+    return temp;
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
