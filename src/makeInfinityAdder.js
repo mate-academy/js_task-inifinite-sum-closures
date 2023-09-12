@@ -9,7 +9,7 @@ function makeInfinityAdder() {
   let addedValues = [];
 
   const adder = (...numbers) => {
-    if (numbers.length === 0) {
+    if (!numbers.length) { // instead numbers.length === 0
       const result = addedValues.reduce((sum, item) => sum + item, 0);
 
       addedValues = [];
