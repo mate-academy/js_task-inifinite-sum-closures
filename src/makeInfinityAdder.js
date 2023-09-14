@@ -6,7 +6,6 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
   let callCount = 0;
 
   const adder = (a) => {
@@ -16,7 +15,7 @@ function makeInfinityAdder() {
       callCount = 0;
 
       return result;
-    }
+    };
 
     callCount += a;
 
@@ -24,6 +23,6 @@ function makeInfinityAdder() {
   };
 
   return adder;
-}
+};
 
 module.exports = makeInfinityAdder;
