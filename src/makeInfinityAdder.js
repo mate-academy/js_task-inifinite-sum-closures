@@ -1,12 +1,25 @@
 'use strict';
 
-/***
- *
- * @return {function}
- */
-
+/**
+ * @return {function} */
 function makeInfinityAdder() {
-  // write code here
+  let sum = 0;
+
+  const adder = (addend) => {
+    if (typeof addend === 'number') {
+      sum += addend;
+
+      return adder;
+    }
+
+    const tempSum = sum;
+
+    sum = 0;
+
+    return tempSum;
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
