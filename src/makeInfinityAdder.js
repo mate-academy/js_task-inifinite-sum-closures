@@ -5,11 +5,11 @@
 function makeInfinityAdder() {
   const augend = [0, 0];
 
-  const summer = (addend) => {
-    if (addend !== undefined) {
+  const adder = (addend) => {
+    if (typeof addend === 'number') {
       augend[0] += addend;
 
-      return summer;
+      return adder;
     }
 
     augend[1] = augend[0];
@@ -18,7 +18,7 @@ function makeInfinityAdder() {
     return augend[1];
   };
 
-  return summer;
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
