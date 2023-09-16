@@ -3,19 +3,20 @@
 /**
  * @return {function} */
 function makeInfinityAdder() {
-  const augend = [0, 0];
+  let sum = 0;
 
   const adder = (addend) => {
     if (typeof addend === 'number') {
-      augend[0] += addend;
+      sum += addend;
 
       return adder;
     }
 
-    augend[1] = augend[0];
-    augend[0] = 0;
+    const tempSum = sum;
 
-    return augend[1];
+    sum = 0;
+
+    return tempSum;
   };
 
   return adder;
