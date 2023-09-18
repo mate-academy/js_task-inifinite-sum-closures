@@ -19,7 +19,7 @@ function makeInfinityAdder() {
 
     memory += number;
 
-    return (nextNumber) => adder(nextNumber);
+    return adder;
   };
 
   return adder;
