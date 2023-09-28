@@ -10,16 +10,11 @@ function makeInfinityAdder() {
 
   return function adder(num) {
     const isNum = num !== undefined;
-
     const currentSum = sum;
 
-    sum = isNum
-      ? sum + num
-      : 0;
+    sum = isNum ? sum + num : 0;
 
-    return isNum
-      ? adder
-      : currentSum;
+    return isNum ? adder : currentSum;
   };
   // #region Alternative Solution
   /*  return function adder(num) {
