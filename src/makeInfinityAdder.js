@@ -5,8 +5,23 @@
  * @return {function}
  */
 
-function makeInfinityAdder() {
-  // write code here
+function makeInfinityAdder(a) {
+  let summ = a || 0;
+
+  function adder(b) {
+    if (b === undefined) {
+      const result = summ;
+
+      summ = 0;
+
+      return result;
+    }
+    summ += b;
+
+    return adder;
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
