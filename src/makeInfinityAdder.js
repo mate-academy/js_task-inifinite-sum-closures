@@ -6,20 +6,20 @@
  */
 
 function makeInfinityAdder() {
-  let amount = 0;
+  let sum = 0;
 
-  return function func(a) {
-    if (a === undefined) {
-      const temporary = amount;
+  return function adding(value) {
+    if (value === undefined) {
+      const result = sum;
 
-      amount = 0;
+      sum = 0;
 
-      return temporary;
+      return result;
     }
 
-    amount += a;
+    sum += value;
 
-    return func;
+    return adding;
   };
 }
 
