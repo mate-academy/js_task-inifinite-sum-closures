@@ -9,7 +9,7 @@ function makeInfinityAdder() {
   const result = [];
 
   return function makeInf(param) {
-    if (param) {
+    if (param !== undefined) {
       result.push(param);
 
       return makeInf;
