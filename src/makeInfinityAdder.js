@@ -6,19 +6,19 @@
  */
 
 function makeInfinityAdder() {
-  let arrayResult = [];
+  let callArray = [];
 
   function adder(number) {
     if (number === undefined) {
-      const result = arrayResult.length !== 0
-        ? arrayResult.reduce((acc, cur) => acc + cur, 0)
+      const sumOfCalls = callArray.length !== 0
+        ? callArray.reduce((acc, cur) => acc + cur, 0)
         : 0;
 
-      arrayResult = [];
+      callArray = [];
 
-      return result;
+      return sumOfCalls;
     } else {
-      arrayResult.push(number);
+      callArray.push(number);
 
       return adder;
     }
