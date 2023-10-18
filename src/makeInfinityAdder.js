@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /***
  *
@@ -6,19 +6,17 @@
  */
 
 function makeInfinityAdder() {
-  let callArray = [];
+  let currentAmount = 0;
 
   function adder(number) {
     if (number === undefined) {
-      const sumOfCalls = callArray.length !== 0
-        ? callArray.reduce((acc, cur) => acc + cur, 0)
-        : 0;
+      const result = currentAmount;
 
-      callArray = [];
+      currentAmount = 0;
 
-      return sumOfCalls;
+      return result;
     } else {
-      callArray.push(number);
+      currentAmount += number;
 
       return adder;
     }
