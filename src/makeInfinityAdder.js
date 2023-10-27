@@ -1,21 +1,20 @@
 'use strict';
 
-/***
- *
- * @return {function}
- */
-
 function makeInfinityAdder() {
-  const adder = (a) => {
-    if (a || a === 0) {
-      return (b) => {
-        return b || b === 0 ? adder(a + b) : a;
-      };
-    } else {
-      const emptyArg = 0;
+  let sum = 0;
 
-      return emptyArg;
+  const adder = (num) => {
+    if (num || num === 0) {
+      sum += num;
+    } else {
+      const temp = sum;
+
+      sum = 0;
+
+      return temp;
     }
+
+    return adder;
   };
 
   return adder;
