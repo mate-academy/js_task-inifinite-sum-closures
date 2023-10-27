@@ -7,11 +7,11 @@ function makeInfinityAdder() {
     if (num || num === 0) {
       sum += num;
     } else {
-      const temp = sum;
+      const tempSum = sum;
 
       sum = 0;
 
-      return temp;
+      return tempSum;
     }
 
     return adder;
