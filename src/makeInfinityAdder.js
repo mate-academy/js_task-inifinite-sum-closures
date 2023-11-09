@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeInfinityAdder(x) {
+function makeInfinityAdder() {
   let sum = 0;
 
   function adder(number) {
@@ -13,13 +13,13 @@ function makeInfinityAdder(x) {
       sum += number;
 
       return adder;
-    } else {
-      const result = sum;
-
-      sum = 0;
-
-      return result;
     }
+
+    const result = sum;
+
+    sum = 0;
+
+    return result;
   }
 
   return adder;
