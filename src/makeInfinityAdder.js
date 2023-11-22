@@ -15,9 +15,9 @@ function makeInfinityAdder() {
       result = 0;
 
       return lastResult;
-    } else {
-      result += a;
     }
+
+    result += a;
 
     return add;
   };
