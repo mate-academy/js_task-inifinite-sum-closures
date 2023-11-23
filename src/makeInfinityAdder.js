@@ -5,8 +5,8 @@
  * @return {function}
  */
 
-function makeInfinityAdder() {
-  // write code here
+function makeInfinityAdder(x = 0) {
+  return (y) => y === undefined ? x : makeInfinityAdder(x + y);
 }
 
 module.exports = makeInfinityAdder;
