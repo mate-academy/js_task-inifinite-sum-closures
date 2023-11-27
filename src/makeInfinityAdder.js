@@ -6,7 +6,7 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
+  
 }
 
 module.exports = makeInfinityAdder;
