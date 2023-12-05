@@ -6,18 +6,18 @@
  */
 
 function makeInfinityAdder() {
+  let sum = 0;
   const adder = (x = null) => {
     if (x === null) {
-      const sum = adder.sum || 0;
+      const res = sum;
 
-      adder.sum = 0;
+      sum = 0;
 
-      return sum;
-    } else {
-      adder.sum = (adder.sum || 0) + x;
-
-      return adder;
+      return res;
     }
+    sum += x;
+
+    return adder;
   };
 
   return adder;
