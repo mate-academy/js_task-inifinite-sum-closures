@@ -4,9 +4,24 @@
  *
  * @return {function}
  */
+function makeAdder() {
+  let sum = 0;
 
-function makeInfinityAdder() {
-  // write code here
+  function adder(num) {
+    if (num === undefined) {
+      const currentSum = sum;
+
+      sum = 0;
+
+      return currentSum;
+    } else {
+      sum += num;
+
+      return adder;
+    }
+  }
+
+  return adder;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
