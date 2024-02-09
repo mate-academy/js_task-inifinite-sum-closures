@@ -6,7 +6,6 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
   let sum = 0;
 
   const adder = (num) => {
