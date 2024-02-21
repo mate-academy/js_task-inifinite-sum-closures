@@ -32,15 +32,7 @@ function makeInfinityAdder() {
       return func;
     }
 
-    func.toString = function() {
-      return totalSum;
-    };
-
     return func;
-  };
-
-  adder.toString = function() {
-    return totalSum;
   };
 
   return adder;
