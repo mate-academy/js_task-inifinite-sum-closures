@@ -6,7 +6,44 @@
  */
 
 function makeInfinityAdder() {
-  // write code here
+  let totalSum = 0;
+  const adder = (firstNumber) => {
+    if (!firstNumber) {
+      const sumToDisplay = totalSum;
+
+      totalSum = 0;
+
+      return sumToDisplay;
+    }
+
+    totalSum = firstNumber;
+
+    function func(secondNumber) {
+      if (!arguments.length) {
+        const sumToDisplay = totalSum;
+
+        totalSum = 0;
+
+        return sumToDisplay;
+      }
+
+      totalSum += secondNumber;
+
+      return func;
+    }
+
+    func.toString = function() {
+      return totalSum;
+    };
+
+    return func;
+  };
+
+  adder.toString = function() {
+    return totalSum;
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
