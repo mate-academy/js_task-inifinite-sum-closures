@@ -10,8 +10,13 @@ function makeInfinityAdder() {
 
   const add = (num = 'noMoreArgs') => {
     if (num === 'noMoreArgs') {
-      return total;
+      const oldTotal = total;
+
+      total = 0;
+
+      return oldTotal;
     }
+
     total += num;
 
     return add;
