@@ -7,33 +7,19 @@
 
 function makeInfinityAdder() {
   let totalSum = 0;
-  const adder = (firstNumber) => {
-    if (!firstNumber) {
-      const sumToDisplay = totalSum;
+
+  function adder(num) {
+    if (num === undefined) {
+      const result = totalSum;
 
       totalSum = 0;
 
-      return sumToDisplay;
+      return result;
     }
+    totalSum += num;
 
-    totalSum = firstNumber;
-
-    function func(secondNumber) {
-      if (!arguments.length) {
-        const sumToDisplay = totalSum;
-
-        totalSum = 0;
-
-        return sumToDisplay;
-      }
-
-      totalSum += secondNumber;
-
-      return func;
-    }
-
-    return func;
-  };
+    return adder;
+  }
 
   return adder;
 }
