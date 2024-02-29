@@ -6,23 +6,23 @@
  */
 
 function makeInfinityAdder() {
-  let b = 0;
+  let tempSum = 0;
 
-  const infinit = (a) => {
-    if (a || a === 0) {
-      b = b + a;
+  const adder = (addSum) => {
+    if (addSum || addSum === 0) {
+      tempSum = tempSum + addSum;
 
-      return infinit;
+      return adder;
     }
 
-    const ba = b;
+    const sum = tempSum;
 
-    b = 0;
+    tempSum = 0;
 
-    return ba;
+    return sum;
   };
 
-  return infinit;
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
