@@ -1,10 +1,8 @@
 'use strict';
 
 /***
- *
  * @return {function}
  */
-
 function makeInfinityAdder() {
   // write code here
 }
