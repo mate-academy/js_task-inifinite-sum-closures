@@ -12,16 +12,16 @@ function makeInfinityAdder() {
       currentSum += num;
 
       return ADDER;
-    } else {
-      sum += currentSum;
-
-      const RESULT = sum;
-
-      sum = 0;
-      currentSum = 0;
-
-      return RESULT;
     }
+
+    sum += currentSum;
+
+    const RESULT = sum;
+
+    sum = 0;
+    currentSum = 0;
+
+    return RESULT;
   };
 
   return ADDER;
