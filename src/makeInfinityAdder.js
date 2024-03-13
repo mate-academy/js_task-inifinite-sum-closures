@@ -6,20 +6,20 @@
  */
 function makeInfinityAdder() {
   // write code here
-  let b = 0;
+  let callCounter = 0;
 
-  const sum = function (a) {
-    if (a !== undefined) {
-      b += a;
+  const sum = function (numberTosum) {
+    if (numberTosum !== undefined) {
+      callCounter += numberTosum;
 
       return sum;
     }
 
-    const c = b;
+    const copyCallCounter = callCounter;
 
-    b = 0;
+    callCounter = 0;
 
-    return c;
+    return copyCallCounter;
   };
 
   return sum;
