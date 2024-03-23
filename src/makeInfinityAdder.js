@@ -8,11 +8,11 @@ function makeInfinityAdder() {
 
   return function adder(item) {
     if (item === null || item === undefined) {
-      const currentSum = sum;
+      const CURRENT_SUM = sum;
 
       sum = 0;
 
-      return currentSum;
+      return CURRENT_SUM;
     }
 
     sum += item;
