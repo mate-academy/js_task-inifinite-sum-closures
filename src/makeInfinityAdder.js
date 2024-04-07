@@ -5,15 +5,15 @@
  */
 function makeInfinityAdder() {
   let RESULT = 0;
-  const adder = (...sumTest) => {
-    if (sumTest.length === 0) {
-      const temp = RESULT;
+  const adder = (...args) => {
+    if (args.length === 0) {
+      const value = RESULT;
 
       RESULT = 0;
 
-      return temp;
+      return value;
     } else {
-      RESULT += sumTest.reduce((acc, item) => acc + item, 0);
+      RESULT += args.reduce((acc, item) => acc + item, 0);
 
       return adder;
     }
