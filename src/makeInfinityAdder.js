@@ -4,19 +4,18 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  let RESULT = 0;
+  let result = 0;
   const adder = (...args) => {
     if (args.length === 0) {
-      const value = RESULT;
+      const value = result;
 
-      RESULT = 0;
+      result = 0;
 
       return value;
-    } else {
-      RESULT += args.reduce((acc, item) => acc + item, 0);
-
-      return adder;
     }
+    result += args.reduce((acc, item) => acc + item, 0);
+
+    return adder;
   };
 
   return adder;
