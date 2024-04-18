@@ -6,22 +6,14 @@
  */
 
 function makeInfinityAdder() {
-  let clearCall = 0;
   let result = 0;
 
   const adder = (arg) => {
     if (arg === undefined) {
-      clearCall++;
+      const sum = result;
+      result = 0;
 
-      if (clearCall === 1) {
-        return result;
-      }
-
-      if (clearCall === 2) {
-        result = 0;
-
-        return result;
-      }
+      return sum;
     }
 
     result += arg;
