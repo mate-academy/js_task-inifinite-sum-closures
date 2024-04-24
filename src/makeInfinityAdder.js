@@ -4,7 +4,21 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
+  let sum = 0;
+
+  return function adder(arg) {
+    if (arg !== undefined) {
+      sum += arg;
+
+      return adder;
+    } else {
+      const result = sum;
+
+      sum = 0;
+
+      return result;
+    }
+  };
 }
 
 module.exports = makeInfinityAdder;
