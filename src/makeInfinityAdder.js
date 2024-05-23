@@ -7,8 +7,8 @@ function makeInfinityAdder() {
   // write code here
   let sum = 0;
 
-  const adder = (b) => {
-    if (b === undefined) {
+  const adder = (...valueToAdd) => {
+    if (valueToAdd.length === 0) {
       const finalSum = sum;
 
       sum = 0;
@@ -16,7 +16,11 @@ function makeInfinityAdder() {
       return finalSum;
     }
 
-    sum += b;
+    for (const value of valueToAdd) {
+      if (typeof value === 'number') {
+        sum += value;
+      }
+    }
 
     return adder;
   };
