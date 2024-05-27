@@ -17,9 +17,7 @@ function makeInfinityAdder() {
 
     sum += number;
 
-    if (number !== undefined) {
-      return adder;
-    }
+    return adder;
   };
 
   return adder;
