@@ -13,13 +13,11 @@ function makeInfinityAdder() {
       return add;
     }
 
-    if (num === undefined) {
-      const newSum = totalSum;
+    const newSum = totalSum;
 
-      totalSum = 0;
+    totalSum = 0;
 
-      return newSum;
-    }
+    return newSum;
   }
 
   return add;
