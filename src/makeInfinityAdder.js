@@ -4,19 +4,21 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  let sum = 0;
+  let totalSum = 0;
 
   function add(num) {
-    if (num === undefined) {
-      const result = sum;
-
-      sum = 0;
-
-      return result;
-    } else {
-      sum += num;
+    if (num !== undefined) {
+      totalSum += num;
 
       return add;
+    }
+
+    if (num === undefined) {
+      const newSum = totalSum;
+
+      totalSum = 0;
+
+      return newSum;
     }
   }
 
