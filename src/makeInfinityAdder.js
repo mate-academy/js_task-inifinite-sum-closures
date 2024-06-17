@@ -6,9 +6,9 @@
 function makeInfinityAdder() {
   let amount = 0;
 
-  const adder = (arg) => {
-    if (arg !== undefined) {
-      amount += arg;
+  const adder = (...args) => {
+    if (args.length > 0) {
+      amount += args[0];
 
       return adder;
     }
@@ -22,5 +22,4 @@ function makeInfinityAdder() {
 
   return adder;
 }
-
 module.exports = makeInfinityAdder;
