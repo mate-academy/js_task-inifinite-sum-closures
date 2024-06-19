@@ -6,8 +6,8 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  function adder(...args) {
-    if (args.length === 0) {
+  function adder(arg) {
+    if (arg === undefined) {
       const result = sum;
 
       sum = 0;
@@ -15,7 +15,7 @@ function makeInfinityAdder() {
       return result;
     }
 
-    sum += args.reduce((acc, value) => acc + value, 0);
+    sum += arg;
 
     return adder;
   }
