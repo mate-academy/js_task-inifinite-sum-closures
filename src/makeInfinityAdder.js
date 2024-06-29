@@ -4,17 +4,17 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  let memory = [];
+  let total = 0;
 
-  const adder = (number) => {
-    if (number === undefined) {
-      const sum = memory.reduce((acc, curr) => acc + curr, 0);
+  const adder = (value) => {
+    if (value === undefined) {
+      const result = total;
 
-      memory = [];
+      total = 0;
 
-      return sum;
+      return result;
     } else {
-      memory.push(number);
+      total += value;
 
       return adder;
     }
