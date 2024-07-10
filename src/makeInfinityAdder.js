@@ -16,11 +16,10 @@ function makeInfinityAdder() {
       return actualResult;
     }
 
-    result += args
-      .reduce((prev, arg) => prev + arg, 0);
-    
+    result += args.reduce((prev, arg) => prev + arg, 0);
+
     return adder;
-  }
+  };
 
   return adder;
 }
