@@ -4,10 +4,9 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
   let result = 0;
 
-  const adder = (...args) => {
+  const chainedSummarizer = (...args) => {
     const actualResult = result;
 
     if (args.length === 0) {
@@ -18,10 +17,10 @@ function makeInfinityAdder() {
 
     result += args.reduce((prev, arg) => prev + arg, 0);
 
-    return adder;
+    return chainedSummarizer;
   };
 
-  return adder;
+  return chainedSummarizer;
 }
 
 module.exports = { makeInfinityAdder };
