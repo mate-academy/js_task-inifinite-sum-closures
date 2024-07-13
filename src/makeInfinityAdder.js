@@ -4,11 +4,10 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
   let sum = 0;
   let result = 0;
 
-  function adder(a) {
+  const adder = (a) => {
     if (a === undefined) {
       result = sum;
       sum = 0;
@@ -19,7 +18,7 @@ function makeInfinityAdder() {
     sum += a;
 
     return adder;
-  }
+  };
 
   return adder;
 }
