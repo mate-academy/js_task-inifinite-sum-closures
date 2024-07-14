@@ -6,19 +6,19 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const adder = (val) => {
-    if (val !== undefined) {
-      sum += val;
+  function adder(value) {
+    if (value === undefined) {
+      const tempSum = sum;
 
-      return adder;
+      sum = 0;
+
+      return tempSum;
     }
 
-    const res = sum;
+    sum += value;
 
-    sum = 0;
-
-    return res;
-  };
+    return adder;
+  }
 
   return adder;
 }
