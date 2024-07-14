@@ -5,17 +5,17 @@
  */
 function makeInfinityAdder() {
   let sum = 0;
-  let result = 0;
 
-  const adder = (a) => {
-    if (a === undefined) {
-      result = sum;
+  const adder = (numberToAdd) => {
+    if (typeof numberToAdd === 'undefined') {
+      const result = sum;
+
       sum = 0;
 
       return result;
     }
 
-    sum += a;
+    sum += numberToAdd;
 
     return adder;
   };
