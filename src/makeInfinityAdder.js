@@ -8,21 +8,13 @@ function makeInfinityAdder() {
 
   const adder = (value) => {
     if (value === undefined) {
-      return yieldAndReset();
-    } else {
-      return add(value);
+      const result = sum;
+
+      sum = 0;
+
+      return result;
     }
-  };
 
-  const yieldAndReset = () => {
-    const result = sum;
-
-    sum = 0;
-
-    return result;
-  };
-
-  const add = (value) => {
     sum += value;
 
     return adder;
