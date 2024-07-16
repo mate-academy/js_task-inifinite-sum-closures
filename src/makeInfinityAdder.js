@@ -4,12 +4,22 @@
  * @return {function}
  */
 function makeInfinityAdder() {
+  let sum = 0;
+
   function adder(value) {
-    let sum = value;
+    if (arguments.length === 0) {
+      return sum;
+    }
+
+    sum += value;
 
     function innerAdder(nextValue) {
       if (arguments.length === 0) {
-        return sum;
+        const currentSum = sum;
+
+        sum = 0;
+
+        return currentSum;
       }
       sum += nextValue;
 
@@ -23,23 +33,3 @@ function makeInfinityAdder() {
 }
 
 module.exports = makeInfinityAdder;
-
-// function makeInfinityAdder() {
-//   function adder(value) {
-//     let sum = value;
-//     function innerAdder(nextValue) {
-//       if (arguments.length === 0) {
-//         return sum;
-//       }
-//       sum += nextValue;
-
-//       console.log(sum);
-//       return innerAdder;
-//     }
-//     return innerAdder;
-//   }
-
-//   return adder;
-// }
-
-// window.makeInfinityAdder = makeInfinityAdder;

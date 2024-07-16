@@ -7,13 +7,5 @@
 </head>
 <body>
   <script src="./makeInfinityAdder.js"></script>
-  <script>
-    const adder = makeInfinityAdder();
-    const result = adder(2)(3)(4)(1)(2)()(4)();
-    console.log(result); // Виведе: 19
-
-    // Виклик makeInfinityAdder з adder
-    makeInfinityAdder(adder);
-  </script>
 </body>
 </html>
