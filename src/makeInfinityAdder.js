@@ -7,10 +7,6 @@ function makeInfinityAdder() {
   let total = 0;
 
   function adder(data) {
-    if (arguments.length > 1) {
-      return 'Error, data isn`t single number!';
-    }
-
     if (data === undefined) {
       const tempTotal = total;
 
@@ -19,8 +15,8 @@ function makeInfinityAdder() {
       return tempTotal;
     }
 
-    if (!Number(data) && data !== 0) {
-      return 'Error, data isn`t number!';
+    if (typeof data !== 'number') {
+      throw new Error('Data must be a number');
     } else {
       total += data;
 
