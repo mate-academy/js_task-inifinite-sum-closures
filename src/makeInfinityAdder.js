@@ -6,11 +6,11 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  return function sumOfNumbers(num) {
+  return function adder(num) {
     if (typeof num === 'number') {
       sum += num;
 
-      return sumOfNumbers;
+      return adder;
     }
 
     const result = sum;
