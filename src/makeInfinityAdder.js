@@ -6,23 +6,21 @@
 function makeInfinityAdder() {
   let result = 0;
 
-  const infinityAdder = (firstNumber) => {
-    const saveResult = [];
+  const checkingСonditions = (number) => {
+    if (number !== undefined) {
+      result += number;
 
-    if (firstNumber !== undefined) {
-      result += firstNumber;
-
-      return infinityAdder;
+      return checkingСonditions;
     } else {
-      saveResult.push(result);
+      const saveResult = result;
 
       result = 0;
 
-      return saveResult[0];
+      return saveResult;
     }
   };
 
-  return infinityAdder;
+  return checkingСonditions;
 }
 
 module.exports = makeInfinityAdder;
