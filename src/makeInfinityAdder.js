@@ -1,21 +1,20 @@
 'use strict';
 
-// /***
-//  * @return {function}
-//  */
-
 function makeInfinityAdder() {
   let count = 0;
 
-  return function countFunction(a) {
-    if (a === undefined) {
+  return function countFunction(value) {
+    if (value === undefined) {
       const result = count;
 
       count = 0;
 
       return result;
     }
-    count += a;
+
+    if (typeof value === 'number') {
+      count += value;
+    }
 
     return countFunction;
   };
