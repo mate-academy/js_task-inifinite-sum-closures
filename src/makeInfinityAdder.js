@@ -15,6 +15,10 @@ function makeInfinityAdder() {
       return result;
     }
 
+    if (typeof arg !== 'number') {
+      throw new Error('Arg must be a number');
+    }
+
     total += arg;
 
     return adder;
