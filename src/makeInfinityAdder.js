@@ -3,11 +3,11 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder(a) {
+function makeInfinityAdder() {
   let sum = 0;
 
-  function inner(b) {
-    if (b === undefined) {
+  function inner(a = null) {
+    if (a === null) {
       const result = sum;
 
       sum = 0;
@@ -15,7 +15,7 @@ function makeInfinityAdder(a) {
       return result;
     }
 
-    sum += b;
+    sum += a;
 
     return inner;
   }
