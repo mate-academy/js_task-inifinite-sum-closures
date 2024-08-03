@@ -8,6 +8,8 @@ function makeInfinityAdder() {
 
   function adder(number) {
     if (number === undefined) {
+      sum = 0;
+
       return sum;
     }
 
