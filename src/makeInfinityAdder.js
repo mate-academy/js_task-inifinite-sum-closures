@@ -3,8 +3,8 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder(initialValue = 0) {
-  let sum = initialValue;
+function makeInfinityAdder() {
+  let sum = 0;
 
   const makeAdder = (value) => {
     if (value === undefined) {
