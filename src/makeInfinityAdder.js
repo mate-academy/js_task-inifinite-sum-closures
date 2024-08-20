@@ -10,10 +10,8 @@ function makeInfinityAdder() {
     if (a === undefined) {
       let result = 0;
 
-      if (totalSum > 0) {
-        result = totalSum;
-        totalSum = 0;
-      }
+      result = totalSum;
+      totalSum = 0;
 
       return result;
     }
