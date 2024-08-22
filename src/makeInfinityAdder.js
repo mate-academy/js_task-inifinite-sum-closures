@@ -5,20 +5,22 @@
  */
 function makeInfinityAdder() {
   let sum = 0;
-  const innerFunction = (a) => {
-    const x = sum;
 
-    if (a !== undefined) {
-      sum += a;
+  function innerAdder(a) {
+    if (a === undefined) {
+      const result = sum;
 
-      return innerFunction;
+      sum = 0;
+
+      return result;
     }
-    sum = 0;
 
-    return x;
-  };
+    sum += a;
 
-  return innerFunction;
+    return innerAdder;
+  }
+
+  return innerAdder;
 }
 
 module.exports = makeInfinityAdder;
