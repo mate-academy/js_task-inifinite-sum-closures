@@ -13,6 +13,7 @@ function makeInfinityAdder() {
       return makeAdder;
     }
 
+    // some more changes
     const lastValue = sum;
 
     sum = 0;
