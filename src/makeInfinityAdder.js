@@ -20,6 +20,7 @@ function makeInfinityAdder() {
     return lastValue;
   };
 
+  // some changes
   return makeAdder;
 }
 
