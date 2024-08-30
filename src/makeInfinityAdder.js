@@ -8,7 +8,7 @@ function makeInfinityAdder() {
   let SUM = 0;
 
   function newNumber(number) {
-    if (!isNaN(number)) {
+    if (number !== undefined) {
       SUM += number;
 
       return newNumber;
