@@ -4,7 +4,23 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
+  let memory = 0;
+
+  const adder = (number) => {
+    if (number === undefined) {
+      const sum = memory;
+
+      memory = 0;
+
+      return sum;
+    }
+
+    memory += number;
+
+    return adder;
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
