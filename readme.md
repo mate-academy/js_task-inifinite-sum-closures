@@ -2,6 +2,8 @@
 
 **Read the guideline before start**
 
+Also create init comet.
+
 [Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
 
 When the word hell is present in the title of the task, nothing good should be expected.
