@@ -4,7 +4,19 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
+  return function sum(x) {
+    if(x) {
+
+      return function sum1(y) {
+
+        if(y) {
+          return sum(x + y)
+        }
+        return x
+      }
+    }
+    return 0
+  }
 }
 
 module.exports = makeInfinityAdder;
