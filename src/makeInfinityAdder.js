@@ -3,14 +3,14 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder(num) {
-  let sum = num || 0;
+function makeInfinityAdder() {
+  let sum = 0;
 
   function result(nextNum) {
     if (nextNum === undefined) {
-      const number = sum; // Сохраняем текущую сумму
+      const number = sum; 
 
-      sum = 0; // Сбрасываем сумму после получения результата
+      sum = 0; 
 
       return number;
     }
