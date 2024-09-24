@@ -5,16 +5,14 @@
  */
 function makeInfinityAdder(num) {
   let sum = num || 0;
-  let sumReserve = 0;
 
   function result(nextNum) {
-    sumReserve = 0;
-
     if (nextNum === undefined) {
-      sumReserve = sum;
-      sum = 0;
+      const number = sum; // Сохраняем текущую сумму
 
-      return sumReserve;
+      sum = 0; // Сбрасываем сумму после получения результата
+
+      return number;
     }
 
     sum += nextNum;
