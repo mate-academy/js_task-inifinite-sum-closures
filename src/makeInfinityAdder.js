@@ -10,14 +10,14 @@ function makeInfinityAdder() {
     if (args.length === 0) {
       const result = sum;
 
-      sum = 0; // Скидаємо суму після повернення результату
+      sum = 0;
 
       return result;
     }
 
     sum += args.reduce((acc, num) => acc + num, 0);
 
-    return adder; // Повертаємо функцію для підтримки ланцюжкових викликів
+    return adder;
   }
 
   return adder;
