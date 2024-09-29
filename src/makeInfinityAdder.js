@@ -7,18 +7,18 @@ function makeInfinityAdder() {
   // write code here
   let sum = 0;
 
-  function adder(...args) {
-    if (args.length === 0) {
+  function adder(num) {
+    if (num === undefined) {
       const result = sum;
 
       sum = 0;
 
       return result;
-    } else {
-      sum += args.reduce((acc, num) => acc + num, 0);
-
-      return adder;
     }
+
+    sum += num;
+
+    return adder;
   }
 
   return adder;
