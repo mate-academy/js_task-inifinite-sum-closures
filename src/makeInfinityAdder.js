@@ -7,21 +7,21 @@ function makeInfinityAdder() {
   // write code here
   let sum = 0;
 
-  const sumNumber = (number) => {
+  const adder = (number) => {
     if (number === undefined) {
-      const result = sum;
+      const currentSum = sum;
 
       sum = 0;
 
-      return result;
+      return currentSum;
     }
 
     sum += number;
 
-    return sumNumber;
+    return adder;
   };
 
-  return sumNumber;
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
