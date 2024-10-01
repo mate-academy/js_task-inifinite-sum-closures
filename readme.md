@@ -2,7 +2,7 @@
 
 **Read the guideline before start**
 
-[Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
+[Guideline](https://github.com/Misha20850/js_task-guideline/blob/master/README.md)
 
 When the word hell is present in the title of the task, nothing good should be expected.
 Let's get down to business. Write the `makeAdder` function, which will return the `adder` function.
