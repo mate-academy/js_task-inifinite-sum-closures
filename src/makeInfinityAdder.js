@@ -1,25 +1,23 @@
 'use strict';
 
 /***
- *
  * @return {function}
  */
-
 function makeInfinityAdder() {
   let sum = 0;
 
-  function adder(addedNumber) {
-    if (addedNumber !== undefined) {
-      sum += addedNumber;
+  function adder(num) {
+    if (num === undefined) {
+      const result = sum;
+
+      sum = 0; // reset sum after returning the result
+
+      return result;
+    } else {
+      sum += num;
 
       return adder;
     }
-
-    const result = sum;
-
-    sum = 0;
-
-    return result;
   }
 
   return adder;
