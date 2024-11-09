@@ -4,7 +4,21 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
+  let sumOfNumbers = 0;
+
+  return function adder(number = NaN) {
+    if (Number.isNaN(number)) {
+      const result = sumOfNumbers;
+
+      sumOfNumbers = 0;
+
+      return result;
+    }
+
+    sumOfNumbers += number;
+
+    return adder;
+  };
 }
 
 module.exports = makeInfinityAdder;
