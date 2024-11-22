@@ -2,7 +2,7 @@
 
 const makeInfinityAdder = require('./makeInfinityAdder');
 
-test('The result of makeInfinityNumber should be a function', () => {
+test('The result of makeInfinityAdder should be a function', () => {
   const adder = makeInfinityAdder();
 
   expect(typeof adder).toBe('function');
