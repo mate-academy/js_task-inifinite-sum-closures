@@ -15,7 +15,9 @@ function makeInfinityAdder() {
       return result;
     }
 
-    sum += a;
+    if (!isNaN(a)) {
+      sum += a;
+    }
 
     const inner = (b) => {
       if (b === undefined) {
@@ -26,7 +28,9 @@ function makeInfinityAdder() {
         return result;
       }
 
-      sum += b;
+      if (!isNaN(b)) {
+        sum += b;
+      }
 
       return inner;
     };
