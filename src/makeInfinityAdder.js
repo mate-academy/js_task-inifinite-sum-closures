@@ -4,7 +4,26 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
+  let numbers = [];
+
+  const makeAdder = (number) => {
+    if (number === undefined) {
+      const result = numbers.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0,
+      );
+
+      numbers = [];
+
+      return result;
+    }
+
+    numbers.push(number);
+
+    return makeAdder;
+  };
+
+  return makeAdder;
 }
 
 module.exports = makeInfinityAdder;
