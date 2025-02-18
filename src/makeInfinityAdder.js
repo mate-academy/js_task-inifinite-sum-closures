@@ -5,23 +5,23 @@
  */
 function makeInfinityAdder() {
   // write code here
-  let summ = 0;
+  let sum = 0;
   let counter = 0;
   const sumFunc = function (value) {
     if (counter) {
-      summ = 0;
+      sum = 0;
 
-      return summ;
+      return sum;
     }
 
-    if (!value && value !== 0) {
+    if (value == null) {
       counter++;
 
-      return summ;
+      return sum;
     }
 
     counter = 0;
-    summ += value;
+    sum += value;
 
     return sumFunc;
   };
