@@ -1,29 +1,20 @@
-# Hellish challenge
+# Infinite Sum Closures
 
-**Read the guideline before start**
+## 🎮 About the Project
+This project introduces a function that continuously sums all the numbers passed as arguments until it encounters a call without parameters. When called without arguments, it returns the accumulated sum.
 
-[Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
+## 🚀 Tech Stack
+- **JavaScript** (Closure-based implementation)
 
-When the word hell is present in the title of the task, nothing good should be expected.
-Let's get down to business. Write the `makeAdder` function, which will return the `adder` function.
+## 🛠️ Tools & Dependencies
+- **ESLint** – Ensuring code quality
+- **Prettier** – Code formatting for readability
+- **Jest** – Unit testing framework
 
-## Task description:
+## 📌 Features
+✅ Uses closures to maintain state across function calls  
+✅ Returns the accumulated sum when called without arguments  
+✅ Handles an infinite number of arguments dynamically  
 
-The `adder` function should work on the following pattern: `adder(2)(3)(4)(1)(2)(3)(4)() === 19`. It will sum all the numbers passed in the parameters until it encounters a call without parameters.
-
-When calling without parameters, it will return the result and clear the amount.
-
-Example:
-```js
-const adder = makeAdder();
-
-console.log(
-  adder(), // 0
-  adder(4)(5)(), // 9
-  adder(), // 0
-  adder(5)(5)(5),
-  adder(4),
-  adder(), // 19
-  adder(), // 0
-);
-```
+## 📜 License
+This project is forked from 💻 [Mate Academy](https://github.com/mate-academy/js_task-inifinite-sum-closures)
