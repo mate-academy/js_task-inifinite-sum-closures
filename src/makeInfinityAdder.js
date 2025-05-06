@@ -14,7 +14,7 @@ function makeInfinityAdder() {
 
       return result;
     }
-
+    
     sum += args[0];
 
     return collectNumbers;
