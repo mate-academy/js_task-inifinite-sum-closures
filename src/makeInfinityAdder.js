@@ -14,7 +14,7 @@ function makeAdder() {
 
       return result;
     } else {
-      totalSum += args.reduce((sum, current) => sum + current);
+      totalSum += args.reduce((sum, current) => sum + current, 0);
 
       return adder;
     }
