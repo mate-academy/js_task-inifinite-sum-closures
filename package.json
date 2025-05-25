@@ -2,7 +2,7 @@
   "name": "js-task-infinite-sum",
   "version": "1.0.0",
   "description": "js task for closures practice",
-  "main": "src/makeInfinityAdder.js",
+  "main": "src/makeAdder.js",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
@@ -17,7 +17,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "latest",
-    "@mate-academy/scripts": "^1.8.6",
+    "@mate-academy/scripts": "^2.1.1",
     "eslint": "^8.57.0",
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-node": "^11.1.0",
