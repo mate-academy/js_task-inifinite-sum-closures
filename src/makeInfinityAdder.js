@@ -5,7 +5,7 @@
  */
 function makeInfinityAdder(num) {
   // write code here
-  let sum = num || 0;
+  let sum = num !== undefined ? num : 0;
 
   function next(nextNum) {
     if (nextNum === undefined) {
