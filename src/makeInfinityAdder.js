@@ -15,7 +15,7 @@ function makeInfinityAdder() {
       sumPreClear = [sum];
       sum = 0;
 
-      return adder;
+      return sum;
     }
 
     for(let i = 0; i < arguments.length; i++) {
