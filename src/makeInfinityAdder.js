@@ -26,9 +26,7 @@ function makeInfinityAdder() {
     return adder;
   };
 
-  adder.clear = () => {
-    return sum;
-  };
+  adder.clear = () => sum;
 
   return adder;
 }
