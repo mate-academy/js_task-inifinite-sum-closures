@@ -1,9 +1,5 @@
-'use strict';
-
-/***
- * @return {function}
- */
-function makeAdder() {
+function makeInfinityAdder() {
+  // write code here
   let result = 0;
 
   const add = function (arg) {
