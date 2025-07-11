@@ -1,4 +1,4 @@
-function makeInfinityAdder() {
+function makeAdder() {
   // write code here
   let result = 0;
 
