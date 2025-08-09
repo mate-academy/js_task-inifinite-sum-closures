@@ -3,28 +3,23 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
+function makeAdder() {
   let sum = 0;
 
   const adder = (num) => {
-    let innerSum = 0;
-
-    if (num !== undefined) {
-      sum += num;
-
-      return adder;
-    }
-
-    innerSum = sum;
-
     if (num === undefined) {
+      const innerSum = sum;
+
       sum = 0;
 
       return innerSum;
     }
+    sum += num;
+
+    return adder;
   };
 
   return adder;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
