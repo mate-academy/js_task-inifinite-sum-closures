@@ -4,7 +4,35 @@
  * @return {function}
  */
 function makeInfinityAdder() {
-  // write code here
+  let totalAmount = 0;
+
+  const adder = (a) => {
+    if (typeof a === 'number' && !Number.isNaN(a)) {
+      totalAmount += a;
+
+      return (b) => {
+        if (b === undefined) {
+          const result = totalAmount;
+
+          totalAmount = 0;
+
+          return result;
+        } else {
+          totalAmount += b;
+
+          return adder;
+        }
+      };
+    } else {
+      const result = totalAmount;
+
+      totalAmount = 0;
+
+      return result;
+    }
+  };
+
+  return adder;
 }
 
 module.exports = makeInfinityAdder;
