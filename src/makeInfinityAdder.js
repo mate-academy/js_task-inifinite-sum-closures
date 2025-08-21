@@ -10,19 +10,7 @@ function makeInfinityAdder() {
     if (typeof a === 'number' && !Number.isNaN(a)) {
       totalAmount += a;
 
-      return (b) => {
-        if (b === undefined) {
-          const result = totalAmount;
-
-          totalAmount = 0;
-
-          return result;
-        } else {
-          totalAmount += b;
-
-          return adder;
-        }
-      };
+      return adder;
     } else {
       const result = totalAmount;
 
