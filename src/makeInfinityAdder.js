@@ -15,11 +15,9 @@ function makeInfinityAdder() {
       return result;
     }
 
-    if (typeof number === 'number') {
-      sum += number;
+    sum += number;
 
-      return adder;
-    }
+    return adder;
   }
 
   return adder;
