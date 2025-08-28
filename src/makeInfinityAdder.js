@@ -24,6 +24,8 @@ const makeInfinityAdder = () => {
   return infinityAdder;
 };
 
+module.exports = makeInfinityAdder;
+
 /**
  * const adder = makeInfinityAdder();
  * let b1 = adder(4)(5)(); // 9
