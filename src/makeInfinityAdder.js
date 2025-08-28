@@ -4,27 +4,19 @@
  * @return {function}
  */
 function makeInfinityAdder() {
+  let sum = 0;
+
   return function adder(x) {
-    let sum = x || 0;
-
-    function inner(y) {
-      if (y === undefined) {
-        const result = sum;
-
-        sum = 0;
-
-        return result;
-      }
-      sum += y;
-
-      return inner;
-    }
-
     if (x === undefined) {
-      return 0;
-    }
+      const result = sum;
 
-    return inner;
+      sum = 0;
+
+      return result;
+    }
+    sum += x;
+
+    return adder;
   };
 }
 
