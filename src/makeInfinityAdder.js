@@ -15,11 +15,9 @@ function makeAdder() {
       return result;
     }
 
-    if (typeof num === 'number' && !Number.isNaN(num)) {
-      sum += num;
+    sum += num;
 
-      return adder;
-    }
+    return adder;
   }
 
   return adder;
