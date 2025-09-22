@@ -3,18 +3,18 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder(number) {
-  let sum = number || 0;
+function makeInfinityAdder(firstArg) {
+  let sum = firstArg || 0;
 
-  function adder(x) {
-    if (x === undefined) {
+  function adder(seconfArg) {
+    if (seconfArg === undefined) {
       const result = sum;
 
       sum = 0;
 
       return result;
     }
-    sum += x;
+    sum += seconfArg;
 
     return adder;
   }
