@@ -6,8 +6,8 @@
 function makeInfinityAdder() {
   let result = 0;
 
-  return function params(a = null) {
-    if (a === null) {
+  return function makeAdder(a = null) {
+    if (arguments.length === 0) {
       const summ = result;
 
       result = 0;
@@ -16,7 +16,7 @@ function makeInfinityAdder() {
     } else {
       result += a;
 
-      return params;
+      return makeAdder;
     }
   };
 }
