@@ -3,8 +3,20 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
-  // write code here
-}
+function makeAdder() {
+  let summ = 0;
 
-module.exports = makeInfinityAdder;
+  return function adder(...args) {
+    if (args.length === 0) {
+      const result = summ;
+
+      summ = 0;
+
+      return result;
+    }
+    summ += args[0];
+
+    return adder;
+  };
+}
+module.exports = makeAdder;
