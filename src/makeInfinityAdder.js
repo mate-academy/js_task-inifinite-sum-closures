@@ -6,8 +6,10 @@
 function makeInfinityAdder() {
   let currentSum = 0;
 
-  const adder = (num) => {
-    if (num !== undefined) {
+  const adder = (...numbers) => {
+    if (numbers.length !== 0) {
+      const num = numbers[0];
+
       currentSum += num;
 
       return adder;
