@@ -3,7 +3,7 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
+function makeAdder() {
   let sum = 0; // zmienna w closure przechowująca sumę
 
   function adder(num) {
@@ -19,5 +19,4 @@ function makeInfinityAdder() {
   return adder;
 }
 
-module.exports = makeInfinityAdder;
-
+module.exports = makeAdder; // eksportujemy pod właściwą nazwą
