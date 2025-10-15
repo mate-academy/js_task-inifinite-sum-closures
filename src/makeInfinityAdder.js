@@ -1,28 +1,25 @@
 'use strict';
 
 /***
- *
  * @return {function}
  */
-
-function makeInfinityAdder() {
+function makeAdder() {
   let sum = 0;
 
-  function adder(addedNumber) {
-    if (addedNumber !== undefined) {
-      sum += addedNumber;
+  function adder(num) {
+    if (arguments.length === 0) {
+      const result = sum;
 
-      return adder;
+      sum = 0;
+
+      return result;
     }
+    sum += num;
 
-    const result = sum;
-
-    sum = 0;
-
-    return result;
+    return adder;
   }
 
   return adder;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
