@@ -5,12 +5,11 @@
  */
 function makeAdder() {
   let sum = 0;
-  let tmp = 0;
   let returner;
 
   return returner = (s) => {
     if (s === undefined) {
-      tmp = sum;
+      const tmp = sum;
       sum = 0;
 
       return tmp;
@@ -22,4 +21,4 @@ function makeAdder() {
 
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
