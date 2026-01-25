@@ -5,7 +5,7 @@
  */
 function makeInfinityAdder() {
   let sum = 0;
-  const fun =  (param) => {
+  const fun = (param) => {
     if (param === undefined) {
       const result = sum;
 
@@ -13,13 +13,13 @@ function makeInfinityAdder() {
 
       return result;
     }
-    
+
     if (param !== undefined) {
       sum += param;
 
       return fun;
     }
-  } 
+  };
 
   return fun;
 }
