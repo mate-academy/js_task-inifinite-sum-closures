@@ -11,7 +11,7 @@ function makeAdder() {
       result += numb;
 
       return adder;
-    } else if (numb === undefined) {
+    } else {
       const temp = result;
 
       result = 0;
