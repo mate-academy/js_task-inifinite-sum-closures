@@ -3,16 +3,22 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder(a = 0) {
-  function adder(b) {
-    if (b === undefined) {
-      return a;
+function makeAdder() {
+  let count = 0;
+
+  return function adder(a) {
+    if (a !== undefined) {
+      count += a;
+
+      return adder;
     }
 
-    return makeInfinityAdder(a + b);
-  }
+    const result = count;
 
-  return adder;
+    count = 0;
+
+    return result;
+  };
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
