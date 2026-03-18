@@ -3,8 +3,8 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder(a) {
-  let total = a ?? 0;
+function makeAdder() {
+  let total = 0;
 
   function innerSum(b) {
     if (arguments.length === 0) {
@@ -23,4 +23,4 @@ function makeInfinityAdder(a) {
   // write code here
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
