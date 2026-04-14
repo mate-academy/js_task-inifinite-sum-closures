@@ -3,8 +3,21 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
-  // write code here
+function makeAdder() {
+  let amount = 0;
+
+  return function adder(value) {
+    if (value === undefined) {
+      const currentAmount = amount;
+
+      amount = 0;
+
+      return currentAmount;
+    }
+    amount += value;
+
+    return adder;
+  };
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
