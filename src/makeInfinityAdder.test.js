@@ -1,6 +1,6 @@
 'use strict';
 
-const makeInfinityAdder = require('./makeInfinityAdder');
+const makeInfinityAdder = require('./makeAdder');
 
 test('The result of makeInfinityNumber should be a function', () => {
   const adder = makeInfinityAdder();
