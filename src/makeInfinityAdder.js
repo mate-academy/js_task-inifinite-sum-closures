@@ -3,7 +3,7 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
+function makeAdder() {
   // write code here
   // Внутрішня змінна для накопичення суми
   let totalSum = 0;
@@ -30,4 +30,4 @@ function makeInfinityAdder() {
   return adder;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
