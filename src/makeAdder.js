@@ -17,7 +17,7 @@ function makeAdder() {
       return result;
     }
     sum += num;
-    
+
     return adder;
   }
 
