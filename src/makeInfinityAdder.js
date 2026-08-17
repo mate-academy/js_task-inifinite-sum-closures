@@ -9,7 +9,7 @@ function makeAdder() {
   function adder(num = 0) {
     sum += num;
 
-    if (num === 0) {
+    if (arguments.length === 0) {
       const result = sum;
 
       sum = 0;
