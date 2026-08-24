@@ -5,10 +5,10 @@
  */
 function makeInfinityAdder() {
   let sum = 0;
+
   const adder = (num) => {
     if (num === undefined) {
       const storeSum = sum;
-
       sum = 0;
 
       return storeSum;
