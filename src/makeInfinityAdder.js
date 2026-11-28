@@ -3,13 +3,15 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
+function makeAdder() {
   let cnt = 0;
 
   const adder = (x) => {
     if (x === undefined) {
       const result = cnt;
+
       cnt = 0;
+
       return result;
     } else {
       cnt += x;
@@ -18,7 +20,7 @@ function makeInfinityAdder() {
     }
   };
 
-   return adder;
+  return adder;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
